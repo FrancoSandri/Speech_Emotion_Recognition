@@ -1,0 +1,13 @@
+librosa
+soundfile
+opensmile
+transformers
+torch
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+pyyaml
+pyarrow
