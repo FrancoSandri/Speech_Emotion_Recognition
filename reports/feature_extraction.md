@@ -15,10 +15,10 @@
 ## EDA — Hallazgos (development pool, n=864)
 
 ### Top 3 features eGeMAPSv02 (ANOVA)
-equivalentSoundLevel_dBp, loudness_sma3_meanRisingSlope, loudness_sma3_meanFallingSlope
+equivalentSoundLevel_dBp, loudness_sma3_meanRisingSlope, loudness_sma3_amean
 
 ### PCA
-- eGeMAPSv02: 39 componentes para 95% varianza (39/88)
+- eGeMAPSv02: 40 componentes para 95% varianza (40/88)
 - wav2vec2:   96 componentes para 95% varianza (96/768)
 
 ## Decisiones para Sprint 3

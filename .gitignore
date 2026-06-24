@@ -21,7 +21,6 @@ env/
 # Datos crudos y modelos (no versionar binarios grandes)
 data/raw/
 data/processed/audio_trimmed/
-models/
 
 # Sí versionar los artefactos procesados livianos
 !data/processed/metadata.parquet
