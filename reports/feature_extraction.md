@@ -18,8 +18,13 @@
 equivalentSoundLevel_dBp, loudness_sma3_meanRisingSlope, loudness_sma3_amean
 
 ### PCA
+<<<<<<< HEAD
 - eGeMAPSv02: 40 componentes para 95% varianza (40/88)
 - wav2vec2:   96 componentes para 95% varianza (96/768)
+=======
+- eGeMAPSv02: 39 componentes para 95% varianza (39/88)
+- wav2vec2: 96 componentes para 95% varianza (96/768)
+>>>>>>> a2c7b8dd6678b5e2ecf5f2c61e621fc9f963ad92
 
 ## Decisiones para Sprint 3
 
