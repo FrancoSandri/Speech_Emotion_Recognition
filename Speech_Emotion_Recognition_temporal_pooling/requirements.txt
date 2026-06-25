@@ -11,4 +11,3 @@ seaborn
 scipy
 pyyaml
 pyarrow
-tqdm
