@@ -167,22 +167,24 @@ post_sprint3:
       - "emotion_quadrant"
       - "emotion_original_eval_quadrant"
 
-
 # ---------------------------------------------------------------------------
 # Representaciones temporales y selección de capas wav2vec
 # ---------------------------------------------------------------------------
 temporal_representation:
   layer_statistics_path: "data/processed/features/wav2vec_layer_statistics.npz"
   sequences_dir: "data/processed/features/wav2vec_sequences"
+  multilayer_sequences_dir: "data/processed/features/wav2vec_multilayer_sequences"
   include_feature_projection: true
   sequence_dtype: "float16"
 
+  # Referencia determinista: promedio uniforme de capas y estadísticas globales.
   static_pooling:
     strategies: ["last", "average"]
     poolings: ["mean", "mean_std"]
 
+  # Referencia aprendida sobre estadísticas por capa ya extraídas.
   layer_mixture:
-    poolings: ["mean", "mean_std"]
+    poolings: ["mean_std"]
     seeds: [13, 42, 73]
     learning_rate: 0.01
     weight_decay: 0.0001
@@ -190,20 +192,16 @@ temporal_representation:
     patience: 20
     validation_fraction: 0.20
 
+  # Configuración compartida por average_attention_statistics y
+  # learned_layers_attention_statistics.
   attentive_pooling:
     seeds: [13, 42, 73]
-    attention_hidden_dim: 128
-    dropout: 0.10
+    attention_hidden_dim: 64
+    dropout: 0.50
     learning_rate: 0.001
     weight_decay: 0.0001
     max_epochs: 100
     patience: 10
     batch_size: 16
-    validation_fraction: 0.20
-
-  elastic_net:
-    C_values: [0.1, 1.0, 10.0]
-    l1_ratios: [0.1, 0.5, 0.9]
+    gradient_clip_norm: 1.0
     inner_folds: 3
-    max_iter: 5000
-    n_jobs: 1
