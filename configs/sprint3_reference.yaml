@@ -14,5 +14,5 @@ interpretable_baseline:
   model: "logistic_regression"
   refinement: "none"
 
-selection_metric: "macro_f1"
+selection_metric: "balanced_accuracy"
 simplicity_tolerance: 0.01

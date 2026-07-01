@@ -4,7 +4,7 @@ Proyecto final de la materia I302 (Machine Learning / Deep Learning) — UdeSA.
 
 ## Objetivo
 
-Desarrollar un sistema de **Speech Emotion Recognition (SER)** sobre la base RAVDESS, comparando representaciones acústicas expertas (eGeMAPSv02) con embeddings de modelos SSL (wav2vec2), bajo protocolos speaker-dependent e speaker-independent.
+Desarrollar un sistema de **Speech Emotion Recognition (SER)** sobre la base RAVDESS, comparando representaciones acústicas expertas (eGeMAPSv02) con embeddings de modelos SSL (wav2vec2), bajo protocolo speaker-independent.
 
 ---
 

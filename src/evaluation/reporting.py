@@ -59,7 +59,7 @@ def summarize_cv_results(
     summary = pd.DataFrame(rows)
 
     return summary.sort_values(
-        ["protocol", "target", "macro_f1_mean"],
+        ["protocol", "target", "balanced_accuracy_mean"],
         ascending=[True, True, False],
     ).reset_index(drop=True)
 

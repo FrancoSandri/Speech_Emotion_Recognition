@@ -9,7 +9,6 @@ explícita, lo que reduce el riesgo de usarlos accidentalmente en Sprint 3.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Literal
 
 import numpy as np
 import pandas as pd
@@ -163,9 +162,8 @@ def get_fold_data(
     splits: pd.DataFrame,
     target_col: str,
     fold_idx: int,
-    protocol: Literal["speaker_dependent", "speaker_independent"],
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-    """Devuelve train y validation para un fold persistido."""
+    """Devuelve train y validation para un fold persistido (speaker-independent)."""
     table, feature_cols = prepare_model_table(
         representation=representation,
         metadata=metadata,
@@ -176,15 +174,13 @@ def get_fold_data(
     if target_col not in table.columns:
         raise KeyError(f"Target inexistente: {target_col!r}")
 
-    fold_col = f"fold_{protocol}"
-    if fold_col not in table.columns:
-        raise KeyError(f"Columna de folds inexistente: {fold_col!r}")
+    fold_col = "fold_speaker_independent"
 
     val_mask = table[fold_col] == fold_idx
     train_mask = (table[fold_col] != fold_idx) & (table[fold_col] != FOLD_SENTINEL)
 
     if not val_mask.any() or not train_mask.any():
-        raise ValueError(f"Fold {fold_idx} inválido o vacío para {protocol}.")
+        raise ValueError(f"Fold {fold_idx} inválido o vacío.")
 
     X_train = table.loc[train_mask, feature_cols].to_numpy(dtype=np.float32)
     y_train = table.loc[train_mask, target_col].to_numpy()

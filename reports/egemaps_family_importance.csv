@@ -1,211 +1,211 @@
 protocol,target,model,method,fold,family,family_label,importance_sum,importance_mean_per_feature,importance_signed_mean,n_features,importance_normalized
-speaker_independent,emotion_original,random_forest,rf_impurity,0,prosody_f0,F0 y prosodia,0.1250385400667787,0.01250385400667787,0.01250385400667787,10,0.15568858637213362
-speaker_independent,emotion_original,random_forest,rf_impurity,0,energy_loudness,Loudness y energía,0.19863011598602962,0.01655250966550247,0.01655250966550247,12,0.20609940178099112
-speaker_independent,emotion_original,random_forest,rf_impurity,0,spectral,Espectro,0.1863119135504721,0.01095952432649836,0.01095952432649836,17,0.13645975463183424
-speaker_independent,emotion_original,random_forest,rf_impurity,0,cepstral_mfcc,MFCC,0.1455638180709055,0.009097738629431593,0.009097738629431593,16,0.11327819931701859
-speaker_independent,emotion_original,random_forest,rf_impurity,0,voice_quality,Calidad vocal,0.1271677252109364,0.012716772521093638,0.012716772521093638,10,0.15833968758493905
-speaker_independent,emotion_original,random_forest,rf_impurity,0,formants,Formantes,0.1729020578138985,0.009605669878549918,0.009605669878549918,18,0.11960257723339786
-speaker_independent,emotion_original,random_forest,rf_impurity,0,temporal_voicing,Voicing y temporalidad,0.0443858293009747,0.008877165860194939,0.008877165860194939,5,0.11053179307968557
-speaker_independent,emotion_original,random_forest,rf_permutation,0,prosody_f0,F0 y prosodia,0.10319752082737389,0.01031975208273739,0.00962615286587645,10,0.1995630751461999
-speaker_independent,emotion_original,random_forest,rf_permutation,0,energy_loudness,Loudness y energía,0.0928717240002603,0.007739310333355024,0.0062750263644802415,12,0.1496625652682739
-speaker_independent,emotion_original,random_forest,rf_permutation,0,spectral,Espectro,0.1324540139285548,0.007791412584032635,0.007020378986762105,17,0.1506701171245491
-speaker_independent,emotion_original,random_forest,rf_permutation,0,cepstral_mfcc,MFCC,0.0809343566780571,0.0050583972923785685,0.004127213442728968,16,0.09781914438302176
-speaker_independent,emotion_original,random_forest,rf_permutation,0,voice_quality,Calidad vocal,0.0762128608542567,0.00762128608542567,0.00597597916009375,10,0.14738021568567114
-speaker_independent,emotion_original,random_forest,rf_permutation,0,formants,Formantes,0.08643731409038741,0.004802073005021523,0.0041925132005265885,18,0.09286235253283794
-speaker_independent,emotion_original,random_forest,rf_permutation,0,temporal_voicing,Voicing y temporalidad,0.0418974986676261,0.00837949973352522,0.00837949973352522,5,0.16204252985944617
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,prosody_f0,F0 y prosodia,4.265779893816887,0.4265779893816887,0.4265779893816887,10,0.1569689602748427
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,energy_loudness,Loudness y energía,5.35159968209151,0.4459666401742925,0.4459666401742925,12,0.16410345017306352
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,spectral,Espectro,6.602340618548181,0.38837297756165773,0.38837297756165773,17,0.14291056736204658
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,cepstral_mfcc,MFCC,5.419819882976479,0.33873874268602994,0.33873874268602994,16,0.12464653490749475
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,voice_quality,Calidad vocal,3.9939556369283737,0.39939556369283735,0.39939556369283735,10,0.14696657570663801
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,formants,Formantes,6.6127163463058265,0.3673731303503237,0.3673731303503237,18,0.1351832015233366
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,temporal_voicing,Voicing y temporalidad,1.7558474804249986,0.3511694960849997,0.3511694960849997,5,0.12922071005257788
-speaker_independent,emotion_original,random_forest,rf_impurity,1,prosody_f0,F0 y prosodia,0.1295556054956307,0.01295556054956307,0.01295556054956307,10,0.16193786268368524
-speaker_independent,emotion_original,random_forest,rf_impurity,1,energy_loudness,Loudness y energía,0.2152995318870454,0.017941627657253784,0.017941627657253784,12,0.22426114445354192
-speaker_independent,emotion_original,random_forest,rf_impurity,1,spectral,Espectro,0.1933499029154456,0.011373523700908564,0.011373523700908564,17,0.14216321341414176
-speaker_independent,emotion_original,random_forest,rf_impurity,1,cepstral_mfcc,MFCC,0.1330060907173968,0.0083128806698373,0.0083128806698373,16,0.10390674515919529
-speaker_independent,emotion_original,random_forest,rf_impurity,1,voice_quality,Calidad vocal,0.1258235962387339,0.01258235962387339,0.01258235962387339,10,0.15727304250654534
-speaker_independent,emotion_original,random_forest,rf_impurity,1,formants,Formantes,0.1644627074688376,0.009136817081602088,0.009136817081602088,18,0.11420552775513279
-speaker_independent,emotion_original,random_forest,rf_impurity,1,temporal_voicing,Voicing y temporalidad,0.0385025652769063,0.0077005130553812595,0.0077005130553812595,5,0.09625246402775768
-speaker_independent,emotion_original,random_forest,rf_permutation,1,prosody_f0,F0 y prosodia,0.0545790928552461,0.0054579092855246095,-0.00467453611341451,10,0.14883294763518815
-speaker_independent,emotion_original,random_forest,rf_permutation,1,energy_loudness,Loudness y energía,0.0835282010513676,0.0069606834209473,-0.006212457459940417,12,0.1898124312623848
-speaker_independent,emotion_original,random_forest,rf_permutation,1,spectral,Espectro,0.0710420040240556,0.004178941413179741,-0.002112907180720965,17,0.11395648699546254
-speaker_independent,emotion_original,random_forest,rf_permutation,1,cepstral_mfcc,MFCC,0.07081529759974992,0.00442595609998437,-0.0018174125507494318,16,0.12069238567443483
-speaker_independent,emotion_original,random_forest,rf_permutation,1,voice_quality,Calidad vocal,0.0565365092713518,0.00565365092713518,-0.00401121857031068,10,0.15417067019007144
-speaker_independent,emotion_original,random_forest,rf_permutation,1,formants,Formantes,0.1042458656339288,0.005791436979662712,-0.0017450855625185887,18,0.1579279888386386
-speaker_independent,emotion_original,random_forest,rf_permutation,1,temporal_voicing,Voicing y temporalidad,0.0210139995002077,0.00420279990004154,-0.00207922931426794,5,0.11460708940381965
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,prosody_f0,F0 y prosodia,4.68955592254683,0.46895559225468303,0.46895559225468303,10,0.17955778755947885
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,energy_loudness,Loudness y energía,5.464376842842597,0.4553647369035498,0.4553647369035498,12,0.17435400289799843
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,spectral,Espectro,6.958489966035778,0.40932293917857515,0.40932293917857515,17,0.15672511975575898
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,cepstral_mfcc,MFCC,4.959981343030758,0.3099988339394224,0.3099988339394224,16,0.11869504423768841
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,voice_quality,Calidad vocal,3.7018477926186173,0.3701847792618617,0.3701847792618617,10,0.14173956137909807
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,formants,Formantes,5.608925409160018,0.3116069671755566,0.3116069671755566,18,0.11931078024926432
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,temporal_voicing,Voicing y temporalidad,1.4314565790333145,0.2862913158066629,0.2862913158066629,5,0.10961770392071297
-speaker_independent,emotion_original,random_forest,rf_impurity,2,prosody_f0,F0 y prosodia,0.1274047938268394,0.012740479382683939,0.012740479382683939,10,0.15857332179533973
-speaker_independent,emotion_original,random_forest,rf_impurity,2,energy_loudness,Loudness y energía,0.2002711240210443,0.016689260335087025,0.016689260335087025,12,0.20772149698219927
-speaker_independent,emotion_original,random_forest,rf_impurity,2,spectral,Espectro,0.1919467684067674,0.01129098637686867,0.01129098637686867,17,0.14053232710846492
-speaker_independent,emotion_original,random_forest,rf_impurity,2,cepstral_mfcc,MFCC,0.128894605370455,0.008055912835653437,0.008055912835653437,16,0.10026725212392824
-speaker_independent,emotion_original,random_forest,rf_impurity,2,voice_quality,Calidad vocal,0.1206037256791175,0.012060372567911749,0.012060372567911749,10,0.1501084286343608
-speaker_independent,emotion_original,random_forest,rf_impurity,2,formants,Formantes,0.1846273971663499,0.010257077620352772,0.010257077620352772,18,0.12766386737241717
-speaker_independent,emotion_original,random_forest,rf_impurity,2,temporal_voicing,Voicing y temporalidad,0.0462515855294221,0.00925031710588442,0.00925031710588442,5,0.11513330598328986
-speaker_independent,emotion_original,random_forest,rf_permutation,2,prosody_f0,F0 y prosodia,0.08368154008410424,0.008368154008410424,0.0052790011258588765,10,0.22463099614770252
-speaker_independent,emotion_original,random_forest,rf_permutation,2,energy_loudness,Loudness y energía,0.05017975837614591,0.004181646531345493,-0.003916521459390708,12,0.11225025554377352
-speaker_independent,emotion_original,random_forest,rf_permutation,2,spectral,Espectro,0.0791748712222649,0.004657345366015582,-0.002229114304240841,17,0.12501970302177726
-speaker_independent,emotion_original,random_forest,rf_permutation,2,cepstral_mfcc,MFCC,0.0441362383938457,0.0027585148996153563,-0.00048056350648848124,16,0.0740483443739323
-speaker_independent,emotion_original,random_forest,rf_permutation,2,voice_quality,Calidad vocal,0.058675534725989,0.0058675534725989,0.0004796959839705999,10,0.15750598999195162
-speaker_independent,emotion_original,random_forest,rf_permutation,2,formants,Formantes,0.09494055309464983,0.0052744751719249906,-0.0031867130249537984,18,0.14158566044972876
-speaker_independent,emotion_original,random_forest,rf_permutation,2,temporal_voicing,Voicing y temporalidad,0.030726007610186096,0.006145201522037219,-0.006145201522037219,5,0.16495905047113407
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,prosody_f0,F0 y prosodia,3.87070618670863,0.387070618670863,0.387070618670863,10,0.14900483725785565
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,energy_loudness,Loudness y energía,5.183621311977522,0.43196844266479345,0.43196844266479345,12,0.16628848689372777
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,spectral,Espectro,6.258642854193976,0.36815546201141036,0.36815546201141036,17,0.141723349839806
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,cepstral_mfcc,MFCC,5.038746813728308,0.3149216758580192,0.3149216758580192,16,0.12123072844259679
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,voice_quality,Calidad vocal,3.8037846915365905,0.380378469153659,0.380378469153659,10,0.146428659677805
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,formants,Formantes,6.369906824150173,0.3538837124527874,0.3538837124527874,18,0.13622936600897495
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,temporal_voicing,Voicing y temporalidad,1.8066333610996712,0.36132667221993425,0.36132667221993425,5,0.13909457187923382
-speaker_independent,emotion_original,random_forest,rf_impurity,3,prosody_f0,F0 y prosodia,0.1332210285063248,0.01332210285063248,0.01332210285063248,10,0.16527909863323434
-speaker_independent,emotion_original,random_forest,rf_impurity,3,energy_loudness,Loudness y energía,0.1851872215283712,0.015432268460697599,0.015432268460697599,12,0.19145861953235832
-speaker_independent,emotion_original,random_forest,rf_impurity,3,spectral,Espectro,0.1916599619873222,0.011274115411018954,0.011274115411018954,17,0.1398709838763783
-speaker_independent,emotion_original,random_forest,rf_impurity,3,cepstral_mfcc,MFCC,0.1462357262030038,0.009139732887687737,0.009139732887687737,16,0.11339101869746035
-speaker_independent,emotion_original,random_forest,rf_impurity,3,voice_quality,Calidad vocal,0.1265626294756807,0.01265626294756807,0.01265626294756807,10,0.15701843436375673
-speaker_independent,emotion_original,random_forest,rf_impurity,3,formants,Formantes,0.1706364928508055,0.009479805158378084,0.009479805158378084,18,0.11761008523673341
-speaker_independent,emotion_original,random_forest,rf_impurity,3,temporal_voicing,Voicing y temporalidad,0.0464969394484875,0.009299387889697499,0.009299387889697499,5,0.11537175966007857
-speaker_independent,emotion_original,random_forest,rf_permutation,3,prosody_f0,F0 y prosodia,0.1233259573118174,0.01233259573118174,0.01211816002052456,10,0.25395648252296077
-speaker_independent,emotion_original,random_forest,rf_permutation,3,energy_loudness,Loudness y energía,0.116738637356646,0.0097282197797205,0.007924128841768232,12,0.20032639764730023
-speaker_independent,emotion_original,random_forest,rf_permutation,3,spectral,Espectro,0.1145081167955739,0.0067357715762102295,0.005981003293792371,17,0.13870501343422986
-speaker_independent,emotion_original,random_forest,rf_permutation,3,cepstral_mfcc,MFCC,0.06460979677446042,0.0040381122984037765,0.001773491993982961,16,0.08315401053343903
-speaker_independent,emotion_original,random_forest,rf_permutation,3,voice_quality,Calidad vocal,0.0369341100858822,0.00369341100858822,0.00342102292901836,10,0.07605581896121776
-speaker_independent,emotion_original,random_forest,rf_permutation,3,formants,Formantes,0.1124173201116827,0.0062454066728712615,0.002215387646218739,18,0.1286072733704888
-speaker_independent,emotion_original,random_forest,rf_permutation,3,temporal_voicing,Voicing y temporalidad,0.0289416473466837,0.00578832946933674,0.00578832946933674,5,0.1191950035303636
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,prosody_f0,F0 y prosodia,4.382862508920244,0.4382862508920244,0.4382862508920244,10,0.16586606516159513
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,energy_loudness,Loudness y energía,5.434129014136303,0.4528440845113586,0.4528440845113586,12,0.17137536547572024
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,spectral,Espectro,6.772580584355425,0.3983870931973779,0.3983870931973779,17,0.15076653539856047
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,cepstral_mfcc,MFCC,5.431558952754055,0.33947243454712844,0.33947243454712844,16,0.1284707353574526
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,voice_quality,Calidad vocal,3.6910746810786392,0.36910746810786393,0.36910746810786393,10,0.13968588618102243
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,formants,Formantes,5.500092065177147,0.30556067028761924,0.30556067028761924,18,0.11563708865061552
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,temporal_voicing,Voicing y temporalidad,1.6937630564534287,0.33875261129068573,0.33875261129068573,5,0.12819832377503368
-speaker_independent,emotion_original,random_forest,rf_impurity,4,prosody_f0,F0 y prosodia,0.1232944377146318,0.01232944377146318,0.01232944377146318,10,0.15366010138945305
-speaker_independent,emotion_original,random_forest,rf_impurity,4,energy_loudness,Loudness y energía,0.1894643341662594,0.01578869451385495,0.01578869451385495,12,0.1967722506202029
-speaker_independent,emotion_original,random_forest,rf_impurity,4,spectral,Espectro,0.1902095191213552,0.011188795242432659,0.011188795242432659,17,0.1394443612579937
-speaker_independent,emotion_original,random_forest,rf_impurity,4,cepstral_mfcc,MFCC,0.150238897556812,0.00938993109730075,0.00938993109730075,16,0.11702537366614568
-speaker_independent,emotion_original,random_forest,rf_impurity,4,voice_quality,Calidad vocal,0.1133507813252397,0.01133507813252397,0.01133507813252397,10,0.14126746407914437
-speaker_independent,emotion_original,random_forest,rf_impurity,4,formants,Formantes,0.1833364291672876,0.010185357175960422,0.010185357175960422,18,0.12693865557571193
-speaker_independent,emotion_original,random_forest,rf_impurity,4,temporal_voicing,Voicing y temporalidad,0.050105600948409504,0.0100211201896819,0.0100211201896819,5,0.12489179341134839
-speaker_independent,emotion_original,random_forest,rf_permutation,4,prosody_f0,F0 y prosodia,0.16364259432876538,0.01636425943287654,0.01636425943287654,10,0.2631730001610644
-speaker_independent,emotion_original,random_forest,rf_permutation,4,energy_loudness,Loudness y energía,0.1152721839562715,0.009606015329689292,0.007740205003796159,12,0.15448568780500704
-speaker_independent,emotion_original,random_forest,rf_permutation,4,spectral,Espectro,0.10731456571198089,0.0063126215124694645,0.0047474408908027114,17,0.1015207287034459
-speaker_independent,emotion_original,random_forest,rf_permutation,4,cepstral_mfcc,MFCC,0.09458352324298966,0.005911470202686854,0.001128694363731609,16,0.09506934028913545
-speaker_independent,emotion_original,random_forest,rf_permutation,4,voice_quality,Calidad vocal,0.1072998568788867,0.01072998568788867,0.008840235355734069,10,0.17256158378262543
-speaker_independent,emotion_original,random_forest,rf_permutation,4,formants,Formantes,0.1366360204466714,0.007590890024815077,0.0008727985781858999,18,0.12207807569401982
-speaker_independent,emotion_original,random_forest,rf_permutation,4,temporal_voicing,Voicing y temporalidad,0.028326872245262702,0.005665374449052541,0.0031375482961656597,5,0.09111158356470203
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,prosody_f0,F0 y prosodia,4.361066404710923,0.43610664047109227,0.43610664047109227,10,0.16718491574361438
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,energy_loudness,Loudness y energía,4.912907875489094,0.40940898962409117,0.40940898962409117,12,0.1569501609997132
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,spectral,Espectro,6.937385412213674,0.40808149483609846,0.40808149483609846,17,0.1564412554163428
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,cepstral_mfcc,MFCC,5.010606967842318,0.3131629354901449,0.3131629354901449,16,0.12005347803781789
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,voice_quality,Calidad vocal,3.575987770612966,0.3575987770612966,0.3575987770612966,10,0.13708830791576843
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,formants,Formantes,6.2810437016852605,0.3489468723158478,0.3489468723158478,18,0.1337715320823917
-speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,temporal_voicing,Voicing y temporalidad,1.6761146383830172,0.33522292767660344,0.33522292767660344,5,0.12851034980435164
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,prosody_f0,F0 y prosodia,0.1239261723702626,0.01239261723702626,0.01239261723702626,10,0.1556631237028033
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,energy_loudness,Loudness y energía,0.2181983950925701,0.01818319959104751,0.01818319959104751,12,0.22839837567138388
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,spectral,Espectro,0.2089050956113329,0.01228853503596076,0.01228853503596076,17,0.15435575172238647
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,cepstral_mfcc,MFCC,0.14105914286379329,0.00881619642898708,0.00881619642898708,16,0.11073985818050976
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,voice_quality,Calidad vocal,0.1167254192593214,0.01167254192593214,0.01167254192593214,10,0.14661828917896422
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,formants,Formantes,0.1521586549589766,0.008453258608832033,0.008453258608832033,18,0.10618101207765233
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,temporal_voicing,Voicing y temporalidad,0.0390271198437384,0.00780542396874768,0.00780542396874768,5,0.09804358946630004
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,prosody_f0,F0 y prosodia,0.1093059238354268,0.01093059238354268,0.01093059238354268,10,0.26573085440356575
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,energy_loudness,Loudness y energía,0.0425572581077801,0.0035464381756483416,0.0013324277363005582,12,0.08621655747801467
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,spectral,Espectro,0.0821111658233547,0.004830068577844395,0.0002996542579041119,17,0.11742257006590671
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,cepstral_mfcc,MFCC,0.0685227849191329,0.004282674057445806,-0.0027654797454497813,16,0.10411500095187097
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,voice_quality,Calidad vocal,0.0934825776041357,0.00934825776041357,0.00416540623630499,10,0.22726311938954047
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,formants,Formantes,0.0903273339771402,0.005018185220952234,-0.0020955281790674,18,0.12199582598347622
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,temporal_voicing,Voicing y temporalidad,0.01588928449998383,0.0031778568999967657,0.002162671940517434,5,0.07725607172762523
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,prosody_f0,F0 y prosodia,4.192728063760742,0.4192728063760742,0.4192728063760742,10,0.1635975335225185
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,energy_loudness,Loudness y energía,4.939703759167962,0.4116419799306635,0.4116419799306635,12,0.16062003446647943
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,spectral,Espectro,5.777715040847144,0.3398655906380673,0.3398655906380673,17,0.13261335224228518
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,cepstral_mfcc,MFCC,4.749465014411212,0.2968415634007007,0.2968415634007007,16,0.11582565547016158
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,voice_quality,Calidad vocal,3.7546406514365827,0.37546406514365827,0.37546406514365827,10,0.1465036464319235
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,formants,Formantes,6.967902101710455,0.38710567231724746,0.38710567231724746,18,0.15104612615127105
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,temporal_voicing,Voicing y temporalidad,1.6631958756580978,0.33263917513161956,0.33263917513161956,5,0.12979365171536067
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,prosody_f0,F0 y prosodia,0.1348212641980938,0.013482126419809379,0.013482126419809379,10,0.16859531852464676
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,energy_loudness,Loudness y energía,0.2339004560286876,0.019491704669057298,0.019491704669057298,12,0.24374568632138094
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,spectral,Espectro,0.2062883551589706,0.01213460912699827,0.01213460912699827,17,0.15174448208202493
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,cepstral_mfcc,MFCC,0.1223270107751393,0.007645438173446206,0.007645438173446206,16,0.09560695723923358
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,voice_quality,Calidad vocal,0.12115007508316819,0.01211500750831682,0.01211500750831682,10,0.15149936191015484
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,formants,Formantes,0.1467974117183667,0.008155411762131482,0.008155411762131482,18,0.10198422718510959
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,temporal_voicing,Voicing y temporalidad,0.034715427037569004,0.0069430854075138,0.0069430854075138,5,0.08682396673744931
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,prosody_f0,F0 y prosodia,0.1160423596910915,0.01160423596910915,0.01063278288970023,10,0.18859703287371957
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,energy_loudness,Loudness y energía,0.0752773730958935,0.006273114424657791,0.0006141817470268918,12,0.10195335311322655
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,spectral,Espectro,0.119002466977923,0.007000145116348411,0.0019090815819485648,17,0.11376936854293564
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,cepstral_mfcc,MFCC,0.1308897101055987,0.008180606881599918,-0.0019391233074228565,16,0.13295474075873337
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,voice_quality,Calidad vocal,0.1026654349464221,0.010266543494642209,0.00903725038830199,10,0.16685627956143262
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,formants,Formantes,0.1375660218284841,0.007642556768249116,0.005360692193532639,18,0.12421011895119184
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,temporal_voicing,Voicing y temporalidad,0.052810289330229396,0.010562057866045879,0.010562057866045879,5,0.1716591061987604
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,prosody_f0,F0 y prosodia,4.112124392951419,0.41121243929514184,0.41121243929514184,10,0.17031552045057113
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,energy_loudness,Loudness y energía,5.108885919656316,0.42574049330469305,0.42574049330469305,12,0.17633273404462488
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,spectral,Espectro,7.012572733227795,0.41250427842516446,0.41250427842516446,17,0.1708505729751138
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,cepstral_mfcc,MFCC,3.8995235512926807,0.24372022195579254,0.24372022195579254,16,0.10094377620939815
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,voice_quality,Calidad vocal,3.5301762951989404,0.353017629519894,0.353017629519894,10,0.1462124574902615
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,formants,Formantes,5.60153659846062,0.31119647769225667,0.31119647769225667,18,0.12889101835389788
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,temporal_voicing,Voicing y temporalidad,1.285119999507796,0.2570239999015592,0.2570239999015592,5,0.10645392047613277
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,prosody_f0,F0 y prosodia,0.1269701339144721,0.01269701339144721,0.01269701339144721,10,0.16027073694713592
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,energy_loudness,Loudness y energía,0.2166972110134358,0.018058100917786316,0.018058100917786316,12,0.22794219811636224
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,spectral,Espectro,0.2268378079686572,0.013343400468744541,0.013343400468744541,17,0.1684298945409471
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,cepstral_mfcc,MFCC,0.1225697705091241,0.007660610656820256,0.007660610656820256,16,0.0966976782320085
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,voice_quality,Calidad vocal,0.11042835477102139,0.01104283547710214,0.01104283547710214,10,0.13939052636530377
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,formants,Formantes,0.1583932435684929,0.00879962464269405,0.00879962464269405,18,0.11107512316973338
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,temporal_voicing,Voicing y temporalidad,0.0381034782547923,0.00762069565095846,0.00762069565095846,5,0.09619384262850915
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,prosody_f0,F0 y prosodia,0.0891733920694189,0.00891733920694189,-0.0018093351603947698,10,0.198516509606089
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,energy_loudness,Loudness y energía,0.1278692464834871,0.010655770540290592,-0.0034731042576957917,12,0.23721721532978599
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,spectral,Espectro,0.1435480802168621,0.008444004718638947,0.004253001784706782,17,0.187979206009862
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,cepstral_mfcc,MFCC,0.0924941945840716,0.005780887161504475,-1.2111281591937542e-05,16,0.1286932699425794
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,voice_quality,Calidad vocal,0.0469860464971434,0.00469860464971434,-0.00469860464971434,10,0.10459965393646928
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,formants,Formantes,0.07753330288195834,0.004307405715664352,-0.0001404476705293475,18,0.0958908401135331
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,temporal_voicing,Voicing y temporalidad,0.01057937573647,0.002115875147294,0.002115875147294,5,0.047103305061681214
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,prosody_f0,F0 y prosodia,3.4445567789225495,0.34445567789225495,0.34445567789225495,10,0.15068109477408975
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,energy_loudness,Loudness y energía,4.911665157241406,0.40930542977011714,0.40930542977011714,12,0.17904942264889082
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,spectral,Espectro,5.777663799246167,0.33986257642624507,0.33986257642624507,17,0.1486718564258012
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,cepstral_mfcc,MFCC,4.119001520504893,0.25743759503155583,0.25743759503155583,16,0.11261529754053681
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,voice_quality,Calidad vocal,3.1224627295656058,0.3122462729565606,0.3122462729565606,10,0.13659118797554218
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,formants,Formantes,5.610640352285133,0.3117022417936185,0.3117022417936185,18,0.1363532031882832
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,temporal_voicing,Voicing y temporalidad,1.554907735193155,0.310981547038631,0.310981547038631,5,0.13603793744685613
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,prosody_f0,F0 y prosodia,0.1247556190973727,0.012475561909737271,0.012475561909737271,10,0.15686202074324543
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,energy_loudness,Loudness y energía,0.1996945538056978,0.016641212817141485,0.016641212817141485,12,0.20923901376159998
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,spectral,Espectro,0.2091435243923157,0.012302560258371512,0.012302560258371512,17,0.15468677694889812
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,cepstral_mfcc,MFCC,0.1465079694850045,0.009156748092812781,0.009156748092812781,16,0.11513277074553191
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,voice_quality,Calidad vocal,0.1221277281273293,0.01221277281273293,0.01221277281273293,10,0.15355783059264227
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,formants,Formantes,0.1579216325157691,0.008773424028653838,0.008773424028653838,18,0.11031302893842708
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,temporal_voicing,Voicing y temporalidad,0.0398489725765066,0.007969794515301321,0.007969794515301321,5,0.1002085582696553
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,prosody_f0,F0 y prosodia,0.061767874539941994,0.006176787453994199,0.0039949287775817395,10,0.1821341786878204
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,energy_loudness,Loudness y energía,0.0713025582144554,0.005941879851204617,-0.0034876578080052334,12,0.17520748684027448
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,spectral,Espectro,0.0843455100976323,0.004961500593978371,-0.002816302280612594,17,0.14629916319348749
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,cepstral_mfcc,MFCC,0.05531065117698142,0.0034569156985613386,-0.00028379675244943653,16,0.10193365179553959
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,voice_quality,Calidad vocal,0.0558997350450873,0.00558997350450873,-0.00198382782745925,10,0.16483086729364585
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,formants,Formantes,0.0847345154959363,0.004707473083107572,-0.003165208755810328,18,0.13880868494712242
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,temporal_voicing,Voicing y temporalidad,0.0153942996174526,0.00307885992349052,0.0016747474885505198,5,0.09078596724210966
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,prosody_f0,F0 y prosodia,3.9647869599976895,0.3964786959997689,0.3964786959997689,10,0.1563163423445341
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,energy_loudness,Loudness y energía,5.134527848039093,0.4278773206699244,0.4278773206699244,12,0.1686956157143457
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,spectral,Espectro,6.509719455259359,0.3829246738387858,0.3829246738387858,17,0.15097251128970518
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,cepstral_mfcc,MFCC,4.614541906445232,0.288408869152827,0.288408869152827,16,0.1137085547863069
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,voice_quality,Calidad vocal,3.8141916991622593,0.38141916991622593,0.38141916991622593,10,0.15037894883872283
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,formants,Formantes,5.714316195377905,0.31746201085432807,0.31746201085432807,18,0.12516309418581792
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,temporal_voicing,Voicing y temporalidad,1.7090799348847767,0.34181598697695537,0.34181598697695537,5,0.13476493284056731
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,prosody_f0,F0 y prosodia,0.13700527182383282,0.013700527182383283,0.013700527182383283,10,0.17343872633973875
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,energy_loudness,Loudness y energía,0.1944542614553724,0.0162045217879477,0.0162045217879477,12,0.20513747992559322
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,spectral,Espectro,0.2120136694337316,0.01247139231963127,0.01247139231963127,17,0.157878771437449
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,cepstral_mfcc,MFCC,0.1481477833062553,0.009259236456640957,0.009259236456640957,16,0.11721521052001782
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,voice_quality,Calidad vocal,0.1044112438452875,0.010441124384528749,0.010441124384528749,10,0.13217705353236192
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,formants,Formantes,0.1653015053296769,0.009183416962759828,0.009183416962759828,18,0.11625539077911214
-speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,temporal_voicing,Voicing y temporalidad,0.0386662648058391,0.00773325296116782,0.00773325296116782,5,0.09789736746572716
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,prosody_f0,F0 y prosodia,0.0333770755872314,0.0033377075587231403,-0.00091753382560082,10,0.11955851756257807
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,energy_loudness,Loudness y energía,0.04271257740646636,0.0035593814505388635,-0.00256634307820088,12,0.127498998093459
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,spectral,Espectro,0.07188071992240881,0.004228277642494636,-6.522685903778896e-05,17,0.1514592269950227
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,cepstral_mfcc,MFCC,0.083094678867806,0.005193417429237875,-0.003522372321289375,16,0.18603106413579
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,voice_quality,Calidad vocal,0.0262320006513939,0.00262320006513939,-0.0012730427822575901,10,0.09396446679052467
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,formants,Formantes,0.09250775037610191,0.0051393194653389955,-0.0030864723196753602,18,0.18409324536254246
-speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,temporal_voicing,Voicing y temporalidad,0.019178165107352402,0.0038356330214704805,0.00132775875270608,5,0.13739448106008315
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,prosody_f0,F0 y prosodia,4.155458511872475,0.4155458511872475,0.4155458511872475,10,0.1645438706328927
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,energy_loudness,Loudness y energía,4.9768987623438905,0.41474156352865754,0.41474156352865754,12,0.16422539650045087
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,spectral,Espectro,6.858928305106405,0.40346637088861204,0.40346637088861204,17,0.15976075358842576
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,cepstral_mfcc,MFCC,3.898865488507932,0.24367909303174576,0.24367909303174576,16,0.09648971598488837
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,voice_quality,Calidad vocal,3.579768388448037,0.3579768388448037,0.3579768388448037,10,0.14174824388731352
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,formants,Formantes,5.670489760232867,0.31502720890182595,0.31502720890182595,18,0.12474146032088715
-speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,temporal_voicing,Voicing y temporalidad,1.8750207932683267,0.3750041586536653,0.3750041586536653,5,0.1484905590851417
+speaker_independent,emotion_original,random_forest,rf_impurity,0,prosody_f0,F0 y prosodia,0.1277309986763518,0.012773099867635179,0.012773099867635179,10,0.15854496249592154
+speaker_independent,emotion_original,random_forest,rf_impurity,0,energy_loudness,Loudness y energía,0.1810098175802581,0.01508415146502151,0.01508415146502151,12,0.18723068425733702
+speaker_independent,emotion_original,random_forest,rf_impurity,0,spectral,Espectro,0.1959996138773277,0.011529389051607511,0.011529389051607511,17,0.14310751295538293
+speaker_independent,emotion_original,random_forest,rf_impurity,0,cepstral_mfcc,MFCC,0.1446641982853081,0.009041512392831757,0.009041512392831757,16,0.1122269658957358
+speaker_independent,emotion_original,random_forest,rf_impurity,0,voice_quality,Calidad vocal,0.1358898635233726,0.01358898635233726,0.01358898635233726,10,0.16867208069420503
+speaker_independent,emotion_original,random_forest,rf_impurity,0,formants,Formantes,0.1688795585927062,0.009382197699594788,0.009382197699594788,18,0.11645569187011877
+speaker_independent,emotion_original,random_forest,rf_impurity,0,temporal_voicing,Voicing y temporalidad,0.0458259494646714,0.009165189892934281,0.009165189892934281,5,0.11376210183129898
+speaker_independent,emotion_original,random_forest,rf_permutation,0,prosody_f0,F0 y prosodia,0.0859375,0.00859375,-0.00859375,10,0.14976099306754764
+speaker_independent,emotion_original,random_forest,rf_permutation,0,energy_loudness,Loudness y energía,0.11484375,0.009570312499999999,-0.009570312499999999,12,0.16677928773431439
+speaker_independent,emotion_original,random_forest,rf_permutation,0,spectral,Espectro,0.1234375,0.007261029411764706,-0.006801470588235294,17,0.12653602622819532
+speaker_independent,emotion_original,random_forest,rf_permutation,0,cepstral_mfcc,MFCC,0.101953125,0.0063720703125,-0.0063720703125,16,0.11104437270065322
+speaker_independent,emotion_original,random_forest,rf_permutation,0,voice_quality,Calidad vocal,0.085546875,0.0085546875,-0.0085546875,10,0.14908026128087695
+speaker_independent,emotion_original,random_forest,rf_permutation,0,formants,Formantes,0.1546875,0.00859375,-0.008550347222222221,18,0.14976099306754764
+speaker_independent,emotion_original,random_forest,rf_permutation,0,temporal_voicing,Voicing y temporalidad,0.042187499999999996,0.008437499999999999,-0.008437499999999999,5,0.1470380659208649
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,prosody_f0,F0 y prosodia,3.826793477492838,0.3826793477492838,0.3826793477492838,10,0.1443777855037161
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,energy_loudness,Loudness y energía,5.125348613653339,0.42711238447111155,0.42711238447111155,12,0.16114154211308956
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,spectral,Espectro,6.764309646745223,0.3979005674556013,0.3979005674556013,17,0.15012046800484607
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,cepstral_mfcc,MFCC,6.121488188170755,0.3825930117606722,0.3825930117606722,16,0.1443452125443486
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,voice_quality,Calidad vocal,3.3604991188101736,0.33604991188101735,0.33604991188101735,10,0.12678536843301866
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,formants,Formantes,6.8302948668714,0.3794608259373,0.3794608259373,18,0.1431634972110694
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,0,temporal_voicing,Voicing y temporalidad,1.7237284863795868,0.34474569727591736,0.34474569727591736,5,0.13006612618991167
+speaker_independent,emotion_original,random_forest,rf_impurity,1,prosody_f0,F0 y prosodia,0.1359801680912412,0.01359801680912412,0.01359801680912412,10,0.170193809976561
+speaker_independent,emotion_original,random_forest,rf_impurity,1,energy_loudness,Loudness y energía,0.20238457916632802,0.016865381597194,0.016865381597194,12,0.21108839553787204
+speaker_independent,emotion_original,random_forest,rf_impurity,1,spectral,Espectro,0.197776402038302,0.011633906002253058,0.011633906002253058,17,0.14561085011338262
+speaker_independent,emotion_original,random_forest,rf_impurity,1,cepstral_mfcc,MFCC,0.1404033282684765,0.008775208016779782,0.008775208016779782,16,0.10983116925627716
+speaker_independent,emotion_original,random_forest,rf_impurity,1,voice_quality,Calidad vocal,0.115862158411863,0.0115862158411863,0.0115862158411863,10,0.14501395643952708
+speaker_independent,emotion_original,random_forest,rf_impurity,1,formants,Formantes,0.1667087615765517,0.009261597865363983,0.009261597865363983,18,0.11591886150040816
+speaker_independent,emotion_original,random_forest,rf_impurity,1,temporal_voicing,Voicing y temporalidad,0.0408846024472334,0.00817692048944668,0.00817692048944668,5,0.10234295717597196
+speaker_independent,emotion_original,random_forest,rf_permutation,1,prosody_f0,F0 y prosodia,0.10703125,0.010703124999999999,-0.004921875000000001,10,0.24361641542985318
+speaker_independent,emotion_original,random_forest,rf_permutation,1,energy_loudness,Loudness y energía,0.07890625,0.006575520833333333,-0.005729166666666667,12,0.14966701921177114
+speaker_independent,emotion_original,random_forest,rf_permutation,1,spectral,Espectro,0.094921875,0.005583639705882353,-0.003791360294117647,17,0.12709057309887148
+speaker_independent,emotion_original,random_forest,rf_permutation,1,cepstral_mfcc,MFCC,0.096875,0.0060546875,-0.0052246093750000005,16,0.13781220580885856
+speaker_independent,emotion_original,random_forest,rf_permutation,1,voice_quality,Calidad vocal,0.06015625,0.006015625,8.673617379884036e-20,10,0.13692309480364012
+speaker_independent,emotion_original,random_forest,rf_permutation,1,formants,Formantes,0.10859375,0.006032986111111111,-0.005902777777777778,18,0.1373182552504039
+speaker_independent,emotion_original,random_forest,rf_permutation,1,temporal_voicing,Voicing y temporalidad,0.014843750000000001,0.00296875,-0.0028125,5,0.06757243639660163
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,prosody_f0,F0 y prosodia,4.652923223696924,0.46529232236969237,0.46529232236969237,10,0.16801177903533848
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,energy_loudness,Loudness y energía,5.716061872913489,0.4763384894094574,0.4763384894094574,12,0.17200042463864562
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,spectral,Espectro,7.245266797007985,0.42619216452988146,0.42619216452988146,17,0.15389315561646846
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,cepstral_mfcc,MFCC,5.427349356280104,0.3392093347675065,0.3392093347675065,16,0.12248464257787779
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,voice_quality,Calidad vocal,4.010837088754449,0.40108370887544487,0.40108370887544487,10,0.14482677712595893
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,formants,Formantes,6.416143440949671,0.35645241338609285,0.35645241338609285,18,0.12871092265058678
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,1,temporal_voicing,Voicing y temporalidad,1.5241727581330136,0.3048345516266027,0.3048345516266027,5,0.11007229835512389
+speaker_independent,emotion_original,random_forest,rf_impurity,2,prosody_f0,F0 y prosodia,0.1268650505366164,0.01268650505366164,0.01268650505366164,10,0.158101437998992
+speaker_independent,emotion_original,random_forest,rf_impurity,2,energy_loudness,Loudness y energía,0.198890722195681,0.01657422684964008,0.01657422684964008,12,0.20655090488402753
+speaker_independent,emotion_original,random_forest,rf_impurity,2,spectral,Espectro,0.19634570291448591,0.011549747230263877,0.011549747230263877,17,0.14393496379860393
+speaker_independent,emotion_original,random_forest,rf_impurity,2,cepstral_mfcc,MFCC,0.1472432110375137,0.009202700689844606,0.009202700689844606,16,0.11468566058063488
+speaker_independent,emotion_original,random_forest,rf_impurity,2,voice_quality,Calidad vocal,0.1202286018568951,0.01202286018568951,0.01202286018568951,10,0.1498309799411393
+speaker_independent,emotion_original,random_forest,rf_impurity,2,formants,Formantes,0.1653131313909086,0.009184062855050478,0.009184062855050478,18,0.11445339263373576
+speaker_independent,emotion_original,random_forest,rf_impurity,2,temporal_voicing,Voicing y temporalidad,0.0451135800678948,0.009022716013578961,0.009022716013578961,5,0.11244266016286668
+speaker_independent,emotion_original,random_forest,rf_permutation,2,prosody_f0,F0 y prosodia,0.071484375,0.0071484375,-0.0023046875000000003,10,0.16653383136657787
+speaker_independent,emotion_original,random_forest,rf_permutation,2,energy_loudness,Loudness y energía,0.084375,0.00703125,-0.00703125,12,0.1638037685572897
+speaker_independent,emotion_original,random_forest,rf_permutation,2,spectral,Espectro,0.1140625,0.006709558823529411,-0.0062959558823529405,17,0.1563094784925771
+speaker_independent,emotion_original,random_forest,rf_permutation,2,cepstral_mfcc,MFCC,0.075,0.0046875,-0.00419921875,16,0.10920251237152646
+speaker_independent,emotion_original,random_forest,rf_permutation,2,voice_quality,Calidad vocal,0.07265624999999999,0.0072656249999999995,-0.006953125,10,0.16926389417586601
+speaker_independent,emotion_original,random_forest,rf_permutation,2,formants,Formantes,0.116796875,0.006488715277777777,-0.006184895833333333,18,0.1511645888846593
+speaker_independent,emotion_original,random_forest,rf_permutation,2,temporal_voicing,Voicing y temporalidad,0.01796875,0.0035937499999999997,-0.0035937499999999997,5,0.08372192615150362
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,prosody_f0,F0 y prosodia,3.9275610233716405,0.39275610233716407,0.39275610233716407,10,0.14284499993924246
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,energy_loudness,Loudness y energía,5.997020168895551,0.4997516807412959,0.4997516807412959,12,0.18175918433940474
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,spectral,Espectro,6.747344115853988,0.39690259505023456,0.39690259505023456,17,0.14435307517428528
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,cepstral_mfcc,MFCC,6.215328707140363,0.38845804419627267,0.38845804419627267,16,0.14128180051033215
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,voice_quality,Calidad vocal,3.4935766068379186,0.34935766068379187,0.34935766068379187,10,0.1270610302989251
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,formants,Formantes,6.3489919290825805,0.35272177383792114,0.35272177383792114,18,0.12828455487419618
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,2,temporal_voicing,Voicing y temporalidad,1.8478928521458402,0.36957857042916803,0.36957857042916803,5,0.13441535486361403
+speaker_independent,emotion_original,random_forest,rf_impurity,3,prosody_f0,F0 y prosodia,0.1318750627499429,0.01318750627499429,0.01318750627499429,10,0.16410201907754246
+speaker_independent,emotion_original,random_forest,rf_impurity,3,energy_loudness,Loudness y energía,0.17963388037689582,0.014969490031407984,0.014969490031407984,12,0.18627657780706977
+speaker_independent,emotion_original,random_forest,rf_impurity,3,spectral,Espectro,0.1935248647588684,0.011383815574051083,0.011383815574051083,17,0.14165734457699544
+speaker_independent,emotion_original,random_forest,rf_impurity,3,cepstral_mfcc,MFCC,0.147003251519762,0.009187703219985126,0.009187703219985126,16,0.11432947349141263
+speaker_independent,emotion_original,random_forest,rf_impurity,3,voice_quality,Calidad vocal,0.1303808329176206,0.01303808329176206,0.01303808329176206,10,0.16224263696740887
+speaker_independent,emotion_original,random_forest,rf_impurity,3,formants,Formantes,0.172532676901597,0.009585148716755388,0.009585148716755388,18,0.11927518552621545
+speaker_independent,emotion_original,random_forest,rf_impurity,3,temporal_voicing,Voicing y temporalidad,0.0450494307753084,0.00900988615506168,0.00900988615506168,5,0.11211676255335529
+speaker_independent,emotion_original,random_forest,rf_permutation,3,prosody_f0,F0 y prosodia,0.064453125,0.0064453125,-0.0001953125,10,0.1663435229311251
+speaker_independent,emotion_original,random_forest,rf_permutation,3,energy_loudness,Loudness y energía,0.10898437500000001,0.00908203125,-0.00908203125,12,0.23439314594840355
+speaker_independent,emotion_original,random_forest,rf_permutation,3,spectral,Espectro,0.10234375,0.0060202205882352935,-0.003630514705882353,17,0.15537255974315425
+speaker_independent,emotion_original,random_forest,rf_permutation,3,cepstral_mfcc,MFCC,0.08046875,0.005029296875,-0.003857421875,16,0.12979835501443854
+speaker_independent,emotion_original,random_forest,rf_permutation,3,voice_quality,Calidad vocal,0.05234375,0.005234375,-0.004609375000000001,10,0.13509110347133796
+speaker_independent,emotion_original,random_forest,rf_permutation,3,formants,Formantes,0.07421875,0.004123263888888889,0.0012586805555555556,18,0.106415048339777
+speaker_independent,emotion_original,random_forest,rf_permutation,3,temporal_voicing,Voicing y temporalidad,0.0140625,0.0028125,-0.00234375,5,0.07258626455176367
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,prosody_f0,F0 y prosodia,3.7479417855909776,0.37479417855909775,0.37479417855909775,10,0.13711274650851657
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,energy_loudness,Loudness y energía,6.102731233560041,0.5085609361300034,0.5085609361300034,12,0.18604927906779628
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,spectral,Espectro,6.869701920189305,0.4041001129523121,0.4041001129523121,17,0.14783387662078276
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,cepstral_mfcc,MFCC,6.211194792916131,0.3881996745572582,0.3881996745572582,16,0.14201694321104588
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,voice_quality,Calidad vocal,3.674973542191334,0.36749735421913343,0.36749735421913343,10,0.13444331436875098
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,formants,Formantes,6.640044392186423,0.368891355121468,0.368891355121468,18,0.1349532883845942
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,3,temporal_voicing,Voicing y temporalidad,1.6071537987859177,0.32143075975718355,0.32143075975718355,5,0.11759055183851332
+speaker_independent,emotion_original,random_forest,rf_impurity,4,prosody_f0,F0 y prosodia,0.130455991240997,0.013045599124099699,0.013045599124099699,10,0.1626310830144904
+speaker_independent,emotion_original,random_forest,rf_impurity,4,energy_loudness,Loudness y energía,0.1838841480277793,0.015323679002314941,0.015323679002314941,12,0.1910304377902513
+speaker_independent,emotion_original,random_forest,rf_impurity,4,spectral,Espectro,0.1916410340212471,0.011273002001249829,0.011273002001249829,17,0.14053325622285665
+speaker_independent,emotion_original,random_forest,rf_impurity,4,cepstral_mfcc,MFCC,0.1442126942503284,0.009013293390645525,0.009013293390645525,16,0.11236292420944602
+speaker_independent,emotion_original,random_forest,rf_impurity,4,voice_quality,Calidad vocal,0.117192442530396,0.0117192442530396,0.0117192442530396,10,0.1460962709993362
+speaker_independent,emotion_original,random_forest,rf_impurity,4,formants,Formantes,0.1847191368472412,0.010262174269291179,0.010262174269291179,18,0.12793191785382552
+speaker_independent,emotion_original,random_forest,rf_impurity,4,temporal_voicing,Voicing y temporalidad,0.047894553082006804,0.00957891061640136,0.00957891061640136,5,0.11941410990979393
+speaker_independent,emotion_original,random_forest,rf_permutation,4,prosody_f0,F0 y prosodia,0.077734375,0.007773437499999999,0.0057421875,10,0.22054133927779176
+speaker_independent,emotion_original,random_forest,rf_permutation,4,energy_loudness,Loudness y energía,0.100390625,0.008365885416666666,0.008365885416666666,12,0.23734976630817625
+speaker_independent,emotion_original,random_forest,rf_permutation,4,spectral,Espectro,0.08125,0.004779411764705883,0.0035386029411764706,17,0.13559739453083267
+speaker_independent,emotion_original,random_forest,rf_permutation,4,cepstral_mfcc,MFCC,0.04453125,0.002783203125,9.765625000000014e-05,16,0.07896266544493802
+speaker_independent,emotion_original,random_forest,rf_permutation,4,voice_quality,Calidad vocal,0.03515625,0.003515625,0.002890625,10,0.09974231424623749
+speaker_independent,emotion_original,random_forest,rf_permutation,4,formants,Formantes,0.07421875,0.004123263888888889,0.003472222222222222,18,0.11698172658509336
+speaker_independent,emotion_original,random_forest,rf_permutation,4,temporal_voicing,Voicing y temporalidad,0.01953125,0.00390625,0.003125,5,0.11082479360693055
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,prosody_f0,F0 y prosodia,4.014240301406534,0.4014240301406534,0.4014240301406534,10,0.14711771477688895
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,energy_loudness,Loudness y energía,5.552490721520823,0.46270756012673525,0.46270756012673525,12,0.16957748850257812
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,spectral,Espectro,7.027720314492713,0.4133953126172184,0.4133953126172184,17,0.15150506478252704
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,cepstral_mfcc,MFCC,6.357253385903735,0.3973283366189834,0.3973283366189834,16,0.14561668587454976
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,voice_quality,Calidad vocal,3.910496977923288,0.3910496977923288,0.3910496977923288,10,0.14331563031551103
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,formants,Formantes,6.516061056223601,0.3620033920124223,0.3620033920124223,18,0.13267046259211068
+speaker_independent,emotion_original,logistic_regression,logreg_coefficient,4,temporal_voicing,Voicing y temporalidad,1.503411914470036,0.30068238289400717,0.30068238289400717,5,0.11019695315583444
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,prosody_f0,F0 y prosodia,0.12749465380792901,0.012749465380792902,0.012749465380792902,10,0.15879670271401605
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,energy_loudness,Loudness y energía,0.20181246767636452,0.016817705639697044,0.016817705639697044,12,0.20946730886630446
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,spectral,Espectro,0.20489507655423078,0.012052651562013576,0.012052651562013576,17,0.15011777120411793
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,cepstral_mfcc,MFCC,0.1393368013237431,0.008708550082733944,0.008708550082733944,16,0.10846643347424963
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,voice_quality,Calidad vocal,0.1335404322795748,0.013354043227957479,0.013354043227957479,10,0.1663268199225623
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,formants,Formantes,0.1521592377215655,0.008453290984531417,0.008453290984531417,18,0.10528713913353323
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,0,temporal_voicing,Voicing y temporalidad,0.0407613306365877,0.00815226612731754,0.00815226612731754,5,0.10153782468521648
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,prosody_f0,F0 y prosodia,0.1407552083333333,0.01407552083333333,0.01407552083333333,10,0.2356887231033714
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,energy_loudness,Loudness y energía,0.13971354166666639,0.011642795138888865,0.011642795138888865,12,0.19495374644612787
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,spectral,Espectro,0.1074218749999998,0.006318933823529401,0.006318933823529401,17,0.10580791019224091
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,cepstral_mfcc,MFCC,0.1201822916666664,0.00751139322916665,0.007283528645833325,16,0.12577514536564025
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,voice_quality,Calidad vocal,0.099348958333333,0.0099348958333333,0.0099348958333333,10,0.1663556852246733
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,formants,Formantes,0.10130208333333279,0.005627893518518489,0.005627893518518489,18,0.09423672863316992
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,0,temporal_voicing,Voicing y temporalidad,0.0230468749999999,0.00460937499999998,0.00460937499999998,5,0.07718206103477626
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,prosody_f0,F0 y prosodia,3.4329338975706283,0.3432933897570628,0.3432933897570628,10,0.14771559131620823
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,energy_loudness,Loudness y energía,4.105583198253938,0.34213193318782814,0.34213193318782814,12,0.1472158285796347
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,spectral,Espectro,5.602123388772672,0.3295366699278042,0.3295366699278042,17,0.1417962172042034
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,cepstral_mfcc,MFCC,4.781970401170407,0.29887315007315046,0.29887315007315046,16,0.12860202208622623
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,voice_quality,Calidad vocal,3.3201954668082423,0.33201954668082423,0.33201954668082423,10,0.14286457336450453
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,formants,Formantes,6.8655832559191285,0.3814212919955071,0.3814212919955071,18,0.16412163289127035
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,0,temporal_voicing,Voicing y temporalidad,1.483699824102008,0.2967399648204016,0.2967399648204016,5,0.12768413455795252
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,prosody_f0,F0 y prosodia,0.1321912007298559,0.01321912007298559,0.01321912007298559,10,0.16649428177777298
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,energy_loudness,Loudness y energía,0.22252879780051,0.018544066483375834,0.018544066483375834,12,0.2335617660889899
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,spectral,Espectro,0.20600399199927288,0.01211788188231017,0.01211788188231017,17,0.15262423138028475
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,cepstral_mfcc,MFCC,0.1314210146230233,0.008213813413938956,0.008213813413938956,16,0.10345264718527794
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,voice_quality,Calidad vocal,0.11334615778869,0.011334615778869,0.011334615778869,10,0.14275902653962252
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,formants,Formantes,0.1587767795395309,0.008820932196640605,0.008820932196640605,18,0.11109928365741925
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,1,temporal_voicing,Voicing y temporalidad,0.0357320575191125,0.0071464115038225,0.0071464115038225,5,0.09000876337063275
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,prosody_f0,F0 y prosodia,0.0548177083333325,0.00548177083333325,-0.0034505208333332504,10,0.21414839583193146
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,energy_loudness,Loudness y energía,0.0566406249999993,0.004720052083333275,-0.002419704861111042,12,0.18439143346573722
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,spectral,Espectro,0.0666666666666659,0.003921568627450935,-0.0004748774509803354,17,0.1531982376218378
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,cepstral_mfcc,MFCC,0.0554687499999986,0.0034667968749999127,-0.0022460937499999252,16,0.1354323287179363
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,voice_quality,Calidad vocal,0.036979166666666,0.0036979166666666003,-0.00127604166666662,10,0.14446115063246642
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,formants,Formantes,0.0433593749999988,0.0024088541666666,-0.0014684606481480777,18,0.09410321432044377
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,1,temporal_voicing,Voicing y temporalidad,0.009505208333333,0.0019010416666666,0.0010156249999999998,5,0.07426523940964697
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,prosody_f0,F0 y prosodia,4.3510113277151286,0.43510113277151286,0.43510113277151286,10,0.18060530439443354
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,energy_loudness,Loudness y energía,4.214016147445612,0.35116801228713435,0.35116801228713435,12,0.1457656645219806
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,spectral,Espectro,6.776425625754266,0.3986132721031921,0.3986132721031921,17,0.16545962747852364
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,cepstral_mfcc,MFCC,3.3102852032285757,0.20689282520178598,0.20689282520178598,16,0.08587875061271118
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,voice_quality,Calidad vocal,3.547873951133268,0.3547873951133268,0.3547873951133268,10,0.14726802727815327
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,formants,Formantes,6.619840476065086,0.3677689153369492,0.3677689153369492,18,0.1526565018991123
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,1,temporal_voicing,Voicing y temporalidad,1.4739777235037805,0.2947955447007561,0.2947955447007561,5,0.12236612381508548
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,prosody_f0,F0 y prosodia,0.125263809484022,0.012526380948402199,0.012526380948402199,10,0.1576682407992675
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,energy_loudness,Loudness y energía,0.217374853593771,0.018114571132814252,0.018114571132814252,12,0.22800620347637804
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,spectral,Espectro,0.2136635961775152,0.012568446833971483,0.012568446833971483,17,0.15819771968089277
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,cepstral_mfcc,MFCC,0.143403129036081,0.008962695564755062,0.008962695564755062,16,0.11281250732635428
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,voice_quality,Calidad vocal,0.107500390835503,0.0107500390835503,0.0107500390835503,10,0.13530961239390882
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,formants,Formantes,0.1525379952473348,0.008474333069296378,0.008474333069296378,18,0.10666553991026811
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,2,temporal_voicing,Voicing y temporalidad,0.0402562256257681,0.008051245125153619,0.008051245125153619,5,0.1013401764129304
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,prosody_f0,F0 y prosodia,0.0674479166666664,0.00674479166666664,0.00375,10,0.19523202185502977
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,energy_loudness,Loudness y energía,0.0647135416666661,0.005392795138888841,0.0018988715277778083,12,0.15609767513183612
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,spectral,Espectro,0.05690104166666639,0.0033471200980391995,-0.0011106004901960595,17,0.0968843896782284
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,cepstral_mfcc,MFCC,0.035677083333332804,0.0022298177083333003,-0.00133463541666665,16,0.06454340490863607
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,voice_quality,Calidad vocal,0.07213541666666651,0.007213541666666651,0.00473958333333333,10,0.20880027047815963
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,formants,Formantes,0.0639322916666664,0.003551793981481467,9.403935185185547e-05,18,0.10280879743760146
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,2,temporal_voicing,Voicing y temporalidad,0.0303385416666664,0.00606770833333328,0.00575520833333332,5,0.17563344051050855
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,prosody_f0,F0 y prosodia,3.1810382048556383,0.31810382048556385,0.31810382048556385,10,0.13250703765345395
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,energy_loudness,Loudness y energía,5.459977300321668,0.45499810836013904,0.45499810836013904,12,0.1895307368037831
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,spectral,Espectro,6.1910690595748346,0.36418053291616675,0.36418053291616675,17,0.1517004213093612
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,cepstral_mfcc,MFCC,5.410885607692405,0.3381803504807753,0.3381803504807753,16,0.14086997247129251
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,voice_quality,Calidad vocal,2.889641486929575,0.2889641486929575,0.2889641486929575,10,0.12036882572774271
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,formants,Formantes,6.344049908036931,0.35244721711316285,0.35244721711316285,18,0.1468128757384363
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,2,temporal_voicing,Voicing y temporalidad,1.4189093173139666,0.2837818634627933,0.2837818634627933,5,0.11821013029593018
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,prosody_f0,F0 y prosodia,0.12073570311057649,0.012073570311057649,0.012073570311057649,10,0.1522029412065567
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,energy_loudness,Loudness y energía,0.1946597297842561,0.01622164414868801,0.01622164414868801,12,0.20449476725001672
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,spectral,Espectro,0.2087436319617648,0.012279037174221458,0.012279037174221458,17,0.1547931162822239
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,cepstral_mfcc,MFCC,0.1427435640300276,0.008921472751876726,0.008921472751876726,16,0.1124666819959771
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,voice_quality,Calidad vocal,0.1287745871628913,0.01287745871628913,0.01287745871628913,10,0.16233699240481916
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,formants,Formantes,0.165574155050386,0.009198564169465889,0.009198564169465889,18,0.11595977705018318
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,3,temporal_voicing,Voicing y temporalidad,0.038768628900093596,0.007753725780018719,0.007753725780018719,5,0.09774572381022326
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,prosody_f0,F0 y prosodia,0.1192708333333333,0.01192708333333333,0.01192708333333333,10,0.23514898259700764
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,energy_loudness,Loudness y energía,0.13919270833333341,0.011599392361111118,0.011599392361111118,12,0.22868837554239574
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,spectral,Espectro,0.117317708333333,0.006901041666666647,0.006747855392156859,17,0.13605781744149972
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,cepstral_mfcc,MFCC,0.0850260416666663,0.005314127604166644,0.005265299479166644,16,0.10477093725153205
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,voice_quality,Calidad vocal,0.0472656249999997,0.00472656249999997,0.00472656249999997,10,0.09318676930427212
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,formants,Formantes,0.1100260416666664,0.006112557870370355,0.006040219907407411,18,0.12051242739839339
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,3,temporal_voicing,Voicing y temporalidad,0.0207031249999998,0.00414062499999996,0.003046875,5,0.08163469046489927
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,prosody_f0,F0 y prosodia,3.322650051134928,0.33226500511349283,0.33226500511349283,10,0.13958776105806267
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,energy_loudness,Loudness y energía,5.447624910769862,0.4539687425641552,0.4539687425641552,12,0.19071668514482734
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,spectral,Espectro,5.6733459873143515,0.333726234547903,0.333726234547903,17,0.14020163775889605
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,cepstral_mfcc,MFCC,4.923731615538702,0.30773322597116887,0.30773322597116887,16,0.12928172198519003
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,voice_quality,Calidad vocal,3.5066671283513187,0.35066671283513184,0.35066671283513184,10,0.14731849749126322
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,formants,Formantes,6.675473541940315,0.3708596412189064,0.3708596412189064,18,0.15580174315035425
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,3,temporal_voicing,Voicing y temporalidad,1.1555546901888145,0.2311109380377629,0.2311109380377629,5,0.09709195341140645
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,prosody_f0,F0 y prosodia,0.13258456915082079,0.013258456915082078,0.013258456915082078,10,0.16742731082950868
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,energy_loudness,Loudness y energía,0.1927526261460666,0.01606271884550555,0.01606271884550555,12,0.20283942830890256
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,spectral,Espectro,0.2128565791544864,0.012520975244381553,0.012520975244381553,17,0.15811441916328586
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,cepstral_mfcc,MFCC,0.1424818767158651,0.008905117294741569,0.008905117294741569,16,0.11245349672509004
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,voice_quality,Calidad vocal,0.1104010256652333,0.01104010256652333,0.01104010256652333,10,0.13941401294537564
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,formants,Formantes,0.1688033314276804,0.009377962857093355,0.009377962857093355,18,0.1184245732575461
+speaker_independent,emotion_quadrant,random_forest,rf_impurity,4,temporal_voicing,Voicing y temporalidad,0.0401199917398435,0.0080239983479687,0.0080239983479687,5,0.1013267587702911
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,prosody_f0,F0 y prosodia,0.0496093749999995,0.00496093749999995,-0.0016796875000000297,10,0.1390143284822509
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,energy_loudness,Loudness y energía,0.0778645833333331,0.006488715277777758,-0.006488715277777758,12,0.18182539027206174
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,spectral,Espectro,0.0919270833333331,0.005407475490196065,-0.005407475490196065,17,0.15152712043920008
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,cepstral_mfcc,MFCC,0.0691406249999994,0.0043212890624999625,-0.0037190755208333375,16,0.12109023691613408
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,voice_quality,Calidad vocal,0.053255208333333214,0.005325520833333321,-0.004544270833333341,10,0.1492306045911839
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,formants,Formantes,0.090755208333333,0.0050419560185185,-0.0050419560185185,18,0.14128461206201445
+speaker_independent,emotion_quadrant,random_forest,rf_permutation,4,temporal_voicing,Voicing y temporalidad,0.0207031249999999,0.004140624999999979,-0.0036197916666666995,5,0.11602770723715489
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,prosody_f0,F0 y prosodia,3.559823614530298,0.3559823614530298,0.3559823614530298,10,0.1507747986860415
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,energy_loudness,Loudness y energía,4.929021605172465,0.4107518004310387,0.4107518004310387,12,0.1739721590899398
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,spectral,Espectro,5.873346302167614,0.34549095895103615,0.34549095895103615,17,0.14633121026296442
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,cepstral_mfcc,MFCC,4.904286826839984,0.306517926677499,0.306517926677499,16,0.12982435000381504
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,voice_quality,Calidad vocal,3.1638721455936674,0.31638721455936675,0.31638721455936675,10,0.13400444445425186
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,formants,Formantes,6.245375138692081,0.3469652854828934,0.3469652854828934,18,0.14695565492682622
+speaker_independent,emotion_quadrant,logistic_regression,logreg_coefficient,4,temporal_voicing,Voicing y temporalidad,1.3946237962788688,0.27892475925577376,0.27892475925577376,5,0.11813738257616119

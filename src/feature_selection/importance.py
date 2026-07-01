@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
-from typing import Any, Literal
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -12,6 +12,7 @@ from sklearn.inspection import permutation_importance
 from src.config.contracts import (
     FOLD_SENTINEL,
     PARTITION_DEVELOPMENT,
+    PROTOCOL_INDEPENDENT,
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT,
 )
@@ -27,7 +28,6 @@ def run_feature_importance(
     metadata: pd.DataFrame,
     splits: pd.DataFrame,
     target_col: str,
-    protocol: Literal["speaker_dependent", "speaker_independent"],
     random_forest_params: Mapping[str, Any],
     logistic_regression_params: Mapping[str, Any],
     seed: int,
@@ -42,7 +42,7 @@ def run_feature_importance(
     Métodos
     -------
     - ``rf_impurity``: importancia Gini del Random Forest ajustado en outer train.
-    - ``rf_permutation``: caída de macro F1 al permutar outer validation.
+    - ``rf_permutation``: caída de balanced accuracy al permutar outer validation.
     - ``logreg_coefficient``: media del coeficiente absoluto entre clases.
 
     Para 8→4 se estudian las features del clasificador entrenado en ocho
@@ -66,9 +66,7 @@ def run_feature_importance(
         partition=PARTITION_DEVELOPMENT,
     )
 
-    fold_col = f"fold_{protocol}"
-    if fold_col not in table.columns:
-        raise KeyError(f"Columna de folds inexistente: {fold_col!r}")
+    fold_col = "fold_speaker_independent"
     if (table[fold_col] == FOLD_SENTINEL).any():
         raise ValueError(f"Development contiene FOLD_SENTINEL en {fold_col}.")
 
@@ -96,8 +94,7 @@ def run_feature_importance(
         y_val = table.loc[val_mask, train_target].to_numpy()
 
         logger.info(
-            "Feature importance: %s | %s | fold=%s",
-            protocol,
+            "Feature importance: %s | fold=%s",
             target_col,
             fold_idx,
         )
@@ -112,7 +109,7 @@ def run_feature_importance(
             estimator=random_forest,
             X=X_val,
             y=y_val,
-            scoring="f1_macro",
+            scoring="balanced_accuracy",
             n_repeats=permutation_repeats,
             random_state=seed + fold_idx,
             n_jobs=1,
@@ -143,7 +140,7 @@ def run_feature_importance(
             for feature, importance, rank in zip(feature_cols, values, ranks):
                 records.append(
                     {
-                        "protocol": protocol,
+                        "protocol": PROTOCOL_INDEPENDENT,
                         "target": target_col,
                         "model": model_name,
                         "method": method,

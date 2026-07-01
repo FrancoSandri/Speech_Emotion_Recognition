@@ -21,7 +21,6 @@ from sklearn.preprocessing import LabelEncoder
 
 from src.config.contracts import (
     PARTITION_DEVELOPMENT,
-    PROTOCOL_DEPENDENT,
     PROTOCOL_INDEPENDENT,
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT,
@@ -101,26 +100,13 @@ def _evaluate_target(
     return metrics, y_true_train_space, y_pred_train_space, None
 
 
-def _group_column(protocol: str) -> str:
-    if protocol == PROTOCOL_INDEPENDENT:
-        return "actor_id"
-    if protocol == PROTOCOL_DEPENDENT:
-        return "utterance_group_id"
-    raise ValueError(f"Protocolo no soportado: {protocol!r}")
-
-
-def _fold_column(protocol: str) -> str:
-    return f"fold_{protocol}"
-
-
 def _inner_split(
     table: pd.DataFrame,
     y: np.ndarray,
-    protocol: str,
     n_splits: int,
     seed: int,
 ) -> tuple[np.ndarray, np.ndarray]:
-    groups = table[_group_column(protocol)].to_numpy()
+    groups = table["actor_id"].to_numpy()
     splitter = StratifiedGroupKFold(
         n_splits=n_splits,
         shuffle=True,
@@ -147,9 +133,9 @@ def _device():
     return torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-def _torch_macro_f1(y_true: np.ndarray, y_pred: np.ndarray, n_classes: int) -> float:
+def _torch_balanced_accuracy(y_true: np.ndarray, y_pred: np.ndarray, n_classes: int) -> float:
     return float(
-        compute_metrics(y_true, y_pred, labels=list(range(n_classes)))["macro_f1"]
+        compute_metrics(y_true, y_pred, labels=list(range(n_classes)))["balanced_accuracy"]
     )
 
 
@@ -218,7 +204,7 @@ def _train_tabular_neural(
         model.eval()
         with torch.inference_mode():
             val_pred = model(X_val_t).argmax(dim=1).cpu().numpy()
-        score = _torch_macro_f1(y_val, val_pred, int(y_train.max()) + 1)
+        score = _torch_balanced_accuracy(y_val, val_pred, int(y_train.max()) + 1)
         if score > best_score + 1e-6:
             best_score = score
             best_epoch = epoch
@@ -272,7 +258,6 @@ def run_static_pooling_grid(
                         metadata=metadata,
                         splits=splits,
                         target_col=target,
-                        protocol=protocol,
                         representation_name="wav2vec_temporal",
                         model_name="logistic_regression",
                         refinement=f"{layer_strategy}_{pooling}",
@@ -319,7 +304,7 @@ def run_layer_mixture_grid(
         representation = build_flat_layer_representation(stats, pooling)
         table, feature_cols = prepare_model_table(representation, metadata, splits)
         for protocol in protocols:
-            fold_col = _fold_column(protocol)
+            fold_col = "fold_speaker_independent"
             folds = sorted(table[fold_col].unique())
             if n_folds is not None and len(folds) != n_folds:
                 raise ValueError(f"Folds inesperados para {protocol}: {folds}")
@@ -349,7 +334,6 @@ def run_layer_mixture_grid(
                     inner_train_idx, inner_val_idx = _inner_split(
                         outer_train,
                         y_outer_train,
-                        protocol,
                         n_splits=inner_folds,
                         seed=42,
                     )
@@ -606,7 +590,7 @@ def _train_multilayer_attention_model(
                 )
                 y_true.extend(batch["labels"].numpy().tolist())
                 y_pred.extend(logits.argmax(dim=1).cpu().numpy().tolist())
-        score = _torch_macro_f1(
+        score = _torch_balanced_accuracy(
             np.asarray(y_true),
             np.asarray(y_pred),
             n_classes,
@@ -726,7 +710,7 @@ def run_multilayer_attention_cv(
     attention_records: dict[str, np.ndarray] = {}
 
     for protocol in protocols:
-        fold_col = _fold_column(protocol)
+        fold_col = "fold_speaker_independent"
         folds = sorted(table[fold_col].unique())
         if n_folds is not None and len(folds) != n_folds:
             raise ValueError(f"Folds inesperados para {protocol}: {folds}")
@@ -743,7 +727,6 @@ def run_multilayer_attention_cv(
                 inner_train_idx, inner_val_idx = _inner_split(
                     outer_train,
                     y_outer_train,
-                    protocol,
                     inner_folds,
                     seed=42,
                 )

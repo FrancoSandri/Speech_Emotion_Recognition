@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from time import perf_counter
-from typing import Any, Literal
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -14,6 +14,7 @@ from sklearn.model_selection import StratifiedGroupKFold
 from src.config.contracts import (
     FOLD_SENTINEL,
     PARTITION_DEVELOPMENT,
+    PROTOCOL_INDEPENDENT,
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT,
     TARGET_EMOTION_QUADRANT,
@@ -36,7 +37,6 @@ def run_nested_rfecv(
     metadata: pd.DataFrame,
     splits: pd.DataFrame,
     target_col: str,
-    protocol: Literal["speaker_dependent", "speaker_independent"],
     logistic_regression_params: Mapping[str, Any],
     seed: int,
     inner_folds: int = 3,
@@ -49,8 +49,7 @@ def run_nested_rfecv(
     """
     Ejecuta RFECV dentro de cada outer train y evalúa outer validation.
 
-    Los grupos internos son ``actor_id`` para speaker-independent y
-    ``utterance_group_id`` para speaker-dependent.
+    Los grupos internos son ``actor_id`` (protocolo speaker-independent).
     """
     if inner_folds < 2:
         raise ValueError("inner_folds debe ser mayor o igual que 2.")
@@ -72,7 +71,7 @@ def run_nested_rfecv(
         if target_col == TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT
         else target_col
     )
-    group_col = "actor_id" if protocol == "speaker_independent" else "utterance_group_id"
+    group_col = "actor_id"
 
     table, feature_cols = prepare_model_table(
         representation=representation,
@@ -81,9 +80,7 @@ def run_nested_rfecv(
         partition=PARTITION_DEVELOPMENT,
     )
 
-    fold_col = f"fold_{protocol}"
-    if fold_col not in table.columns:
-        raise KeyError(f"Columna de folds inexistente: {fold_col!r}")
+    fold_col = "fold_speaker_independent"
     if (table[fold_col] == FOLD_SENTINEL).any():
         raise ValueError(f"Development contiene FOLD_SENTINEL en {fold_col}.")
 
@@ -134,14 +131,13 @@ def run_nested_rfecv(
             step=step,
             min_features_to_select=min(min_features_to_select, len(feature_cols)),
             cv=inner_cv,
-            scoring="f1_macro",
+            scoring="balanced_accuracy",
             importance_getter="named_steps.classifier.coef_",
             n_jobs=n_jobs,
         )
 
         logger.info(
-            "RFECV: %s | %s | outer fold=%s",
-            protocol,
+            "RFECV: %s | outer fold=%s",
             target_col,
             fold_idx,
         )
@@ -187,7 +183,7 @@ def run_nested_rfecv(
 
         row: dict[str, Any] = {
             "representation": "egemaps",
-            "protocol": protocol,
+            "protocol": PROTOCOL_INDEPENDENT,
             "target": target_col,
             "model": "logistic_regression",
             "refinement": "rfecv",
@@ -197,7 +193,7 @@ def run_nested_rfecv(
             "n_train": len(X_train),
             "n_validation": len(X_val),
             "train_seconds": float(train_seconds),
-            "inner_best_macro_f1": float(np.max(selector.cv_results_["mean_test_score"])),
+            "inner_best_balanced_accuracy": float(np.max(selector.cv_results_["mean_test_score"])),
             **metrics,
         }
         if original_metrics is not None:
@@ -213,7 +209,7 @@ def run_nested_rfecv(
         ):
             feature_rows.append(
                 {
-                    "protocol": protocol,
+                    "protocol": PROTOCOL_INDEPENDENT,
                     "target": target_col,
                     "model": "logistic_regression",
                     "method": "rfecv",
@@ -229,7 +225,7 @@ def run_nested_rfecv(
         prediction_frame.insert(
             0,
             "experiment",
-            f"egemaps_logistic_regression_{target_col}_{protocol}_rfecv",
+            f"egemaps_logistic_regression_{target_col}_{PROTOCOL_INDEPENDENT}_rfecv",
         )
         prediction_frames.append(prediction_frame)
 

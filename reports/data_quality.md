@@ -1,6 +1,6 @@
 # Sprint 1 — Data Quality Report
 
-**Fecha:** 2026-06-23  
+**Fecha:** 2026-06-30  
 **Seed:** 42  
 **Status:** ✅ PASS WITH WARNINGS (1)
 

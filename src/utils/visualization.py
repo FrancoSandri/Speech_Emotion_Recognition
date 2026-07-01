@@ -17,7 +17,6 @@ TARGET_LABELS = {
 }
 
 PROTOCOL_LABELS = {
-    "speaker_dependent": "Speaker-dependent",
     "speaker_independent": "Speaker-independent",
 }
 
@@ -46,7 +45,7 @@ def plot_top_configurations(summary, protocol="speaker_independent", top_n=8):
         target_data = (
             data.query("target == @target")
             .sort_values(
-                ["macro_f1_mean", "macro_f1_std"],
+                ["balanced_accuracy_mean", "balanced_accuracy_std"],
                 ascending=[False, True],
             )
             .head(top_n)
@@ -56,86 +55,22 @@ def plot_top_configurations(summary, protocol="speaker_independent", top_n=8):
             configuration_label,
             axis=1,
         )
-        target_data = target_data.sort_values("macro_f1_mean")
+        target_data = target_data.sort_values("balanced_accuracy_mean")
 
         ax.errorbar(
-            target_data["macro_f1_mean"],
+            target_data["balanced_accuracy_mean"],
             target_data["configuration"],
-            xerr=target_data["macro_f1_std"],
+            xerr=target_data["balanced_accuracy_std"],
             fmt="o",
             capsize=3,
         )
         ax.set_title(TARGET_LABELS[target])
-        ax.set_xlabel("Macro F1 medio ± desvío")
+        ax.set_xlabel("Balanced accuracy media ± desvío")
         ax.grid(axis="x", alpha=0.25)
 
     fig.suptitle(
         f"Mejores configuraciones — {PROTOCOL_LABELS.get(protocol, protocol)}",
         y=1.02,
-        fontsize=14,
-    )
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_protocol_scatter(summary):
-    data = summary.pivot_table(
-        index=["representation", "target", "model", "refinement"],
-        columns="protocol",
-        values="macro_f1_mean",
-    ).reset_index()
-
-    required = {"speaker_dependent", "speaker_independent"}
-    if not required.issubset(data.columns):
-        print("Faltan resultados de alguno de los protocolos.")
-        return
-
-    targets = [target for target in TARGET_LABELS if target in set(data["target"])]
-    fig, axes = plt.subplots(
-        1,
-        len(targets),
-        figsize=(6 * len(targets), 5),
-        squeeze=False,
-    )
-
-    for ax, target in zip(axes.ravel(), targets):
-        target_data = data.query("target == @target").copy()
-        ax.scatter(
-            target_data["speaker_independent"],
-            target_data["speaker_dependent"],
-            alpha=0.8,
-        )
-
-        lower = float(
-            min(
-                target_data["speaker_independent"].min(),
-                target_data["speaker_dependent"].min(),
-            )
-        )
-        upper = float(
-            max(
-                target_data["speaker_independent"].max(),
-                target_data["speaker_dependent"].max(),
-            )
-        )
-        margin = max(0.02, (upper - lower) * 0.08)
-        ax.plot(
-            [lower - margin, upper + margin],
-            [lower - margin, upper + margin],
-            linestyle="--",
-            linewidth=1,
-        )
-        ax.set_xlim(lower - margin, upper + margin)
-        ax.set_ylim(lower - margin, upper + margin)
-        ax.set_xlabel("Macro F1 speaker-independent")
-        ax.set_ylabel("Macro F1 speaker-dependent")
-        ax.set_title(TARGET_LABELS[target])
-        ax.grid(alpha=0.2)
-
-    fig.suptitle(
-        "Brecha de generalización entre protocolos\n"
-        "Los puntos sobre la diagonal rinden mejor con hablantes conocidos",
-        y=1.05,
         fontsize=14,
     )
     plt.tight_layout()
