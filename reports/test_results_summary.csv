@@ -1,0 +1,4 @@
+modelo,macro_f1,balanced_accuracy,accuracy,n_test
+Logistic Regression · wav2vec2 temporal (average_mean_std) — MODELO FINAL,0.8087,0.8281,0.8167,240
+Logistic Regression · eGeMAPSv02 (referencia interpretable),0.5401,0.5547,0.55,240
+Random Forest · eGeMAPSv02 (baseline obligatorio),0.525,0.5391,0.5542,240
