@@ -3003,7 +3003,7 @@ speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope,0.011328125,2,True,0.6
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_amean,-0.01328125,84,False,0.0
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_stddevNorm,0.005078125,8,True,0.2
-speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_percentile20.0,-0.001953125,25,False,0.4
+speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_percentile20.0,-0.001171875,22,False,0.4
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_percentile50.0,-0.012109375,81,False,0.0
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_percentile80.0,-0.0125,82,False,0.2
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,loudness_sma3_pctlrange0-2,-0.0109375,77,False,0.2
@@ -3019,10 +3019,10 @@ speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,mfcc2_sma3_stddevNorm,-0.006640625,58,False,0.2
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,mfcc3_sma3_amean,-0.00859375,68,False,0.2
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,mfcc3_sma3_stddevNorm,-0.00703125,61,False,0.0
-speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,mfcc4_sma3_amean,-0.001953125,25,False,0.2
+speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,mfcc4_sma3_amean,-0.001953125,26,False,0.2
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,mfcc4_sma3_stddevNorm,-0.009375,72,False,0.2
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,jitterLocal_sma3nz_amean,0.009765625,4,True,0.2
-speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,jitterLocal_sma3nz_stddevNorm,-0.0015625,24,False,0.2
+speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,jitterLocal_sma3nz_stddevNorm,-0.0015625,25,False,0.2
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,shimmerLocaldB_sma3nz_amean,-0.005859375,51,False,0.0
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,shimmerLocaldB_sma3nz_stddevNorm,-0.004296875,43,False,0.0
 speaker_independent,emotion_original_eval_quadrant,random_forest,rf_permutation,importance,1,HNRdBACF_sma3nz_amean,0.00859375,5,True,0.2
