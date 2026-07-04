@@ -41,7 +41,6 @@ METADATA_REQUIRED_COLS = [
 SPLITS_REQUIRED_COLS = [
     "file_id",
     "partition",
-    "fold_speaker_dependent",
     "fold_speaker_independent",
 ]
 
@@ -61,19 +60,16 @@ ALL_TARGETS = {
 # ---------------------------------------------------------------------------
 # Nombres oficiales de protocolos de evaluación
 # ---------------------------------------------------------------------------
-PROTOCOL_DEPENDENT   = "speaker_dependent"
 PROTOCOL_INDEPENDENT = "speaker_independent"
 
 # ---------------------------------------------------------------------------
 # Valores oficiales de la columna `partition`
 # ---------------------------------------------------------------------------
 PARTITION_DEVELOPMENT      = "development"
-PARTITION_TEST_DEPENDENT   = "test_speaker_dependent"
 PARTITION_TEST_INDEPENDENT = "test_speaker_independent"
 
 ALL_PARTITIONS = {
     PARTITION_DEVELOPMENT,
-    PARTITION_TEST_DEPENDENT,
     PARTITION_TEST_INDEPENDENT,
 }
 

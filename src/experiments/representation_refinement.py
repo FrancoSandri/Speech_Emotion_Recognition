@@ -9,7 +9,6 @@ from typing import Any
 import pandas as pd
 
 from src.config.contracts import (
-    PROTOCOL_DEPENDENT,
     PROTOCOL_INDEPENDENT,
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT,
@@ -27,7 +26,7 @@ from src.utils.logging import get_logger
 
 logger = get_logger(__name__)
 
-DEFAULT_PROTOCOLS = (PROTOCOL_DEPENDENT, PROTOCOL_INDEPENDENT)
+DEFAULT_PROTOCOLS = (PROTOCOL_INDEPENDENT,)
 DEFAULT_TARGETS = (
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_QUADRANT,
@@ -58,7 +57,6 @@ def run_feature_importance_grid(
                 metadata=metadata,
                 splits=splits,
                 target_col=target,
-                protocol=protocol,
                 random_forest_params=model_configs["random_forest"],
                 logistic_regression_params=model_configs["logistic_regression"],
                 seed=seed,
@@ -100,7 +98,6 @@ def run_rfecv_grid(
                 metadata=metadata,
                 splits=splits,
                 target_col=target,
-                protocol=protocol,
                 logistic_regression_params=logistic_regression_config,
                 seed=seed,
                 inner_folds=inner_folds,
@@ -157,7 +154,6 @@ def run_pca_grid(
                         metadata=metadata,
                         splits=splits,
                         target_col=target,
-                        protocol=protocol,
                         representation_name=representation_name,
                         model_name="logistic_regression",
                         refinement=refinement,

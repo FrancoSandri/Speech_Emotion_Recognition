@@ -75,7 +75,6 @@ SPLITS_SCHEMA: dict[str, ColumnSpec] = {
     "file_id":                    ColumnSpec("str", nullable=False),
     "partition":                  ColumnSpec("str", nullable=False,
                                              valid_values=ALL_PARTITIONS),
-    "fold_speaker_dependent":     ColumnSpec("int", nullable=False, min_val=-1),
     "fold_speaker_independent":   ColumnSpec("int", nullable=False, min_val=-1),
 }
 

@@ -9,7 +9,6 @@ from typing import Any, Callable
 import pandas as pd
 
 from src.config.contracts import (
-    PROTOCOL_DEPENDENT,
     PROTOCOL_INDEPENDENT,
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT,
@@ -23,7 +22,7 @@ from src.utils.logging import get_logger
 logger = get_logger(__name__)
 
 DEFAULT_REPRESENTATIONS = ("egemaps", "wav2vec")
-DEFAULT_PROTOCOLS = (PROTOCOL_DEPENDENT, PROTOCOL_INDEPENDENT)
+DEFAULT_PROTOCOLS = (PROTOCOL_INDEPENDENT,)
 DEFAULT_TARGETS = (
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_QUADRANT,
@@ -127,7 +126,6 @@ def run_baseline_grid(
                         metadata=metadata,
                         splits=splits,
                         target_col=target,
-                        protocol=protocol,
                         representation_name=representation_name,
                         model_name=model_name,
                         refinement="none",

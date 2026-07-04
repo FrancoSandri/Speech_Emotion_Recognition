@@ -1,0 +1,18 @@
+# Referencias congeladas antes de los nuevos experimentos.
+# Las métricas efectivas se leen de reports/cv_results.csv.
+primary:
+  representation: "wav2vec"
+  protocol: "speaker_independent"
+  target: "emotion_original"
+  model: "logistic_regression"
+  refinement: "none"
+
+interpretable_baseline:
+  representation: "egemaps"
+  protocol: "speaker_independent"
+  target: "emotion_original"
+  model: "logistic_regression"
+  refinement: "none"
+
+selection_metric: "balanced_accuracy"
+simplicity_tolerance: 0.01

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from time import perf_counter
 from collections.abc import Mapping
-from typing import Any, Callable, Literal
+from typing import Any, Callable
 
 import numpy as np
 import pandas as pd
@@ -12,6 +12,7 @@ import pandas as pd
 from src.config.contracts import (
     FOLD_SENTINEL,
     PARTITION_DEVELOPMENT,
+    PROTOCOL_INDEPENDENT,
     TARGET_EMOTION_ORIGINAL,
     TARGET_EMOTION_ORIGINAL_EVAL_QUADRANT,
     TARGET_EMOTION_QUADRANT,
@@ -35,7 +36,6 @@ def run_cv(
     metadata: pd.DataFrame,
     splits: pd.DataFrame,
     target_col: str,
-    protocol: Literal["speaker_dependent", "speaker_independent"],
     representation_name: str,
     model_name: str,
     refinement: str = "none",
@@ -74,9 +74,7 @@ def run_cv(
         partition=PARTITION_DEVELOPMENT,
     )
 
-    fold_col = f"fold_{protocol}"
-    if fold_col not in table.columns:
-        raise KeyError(f"Columna de folds inexistente: {fold_col!r}")
+    fold_col = "fold_speaker_independent"
     if (table[fold_col] == FOLD_SENTINEL).any():
         raise ValueError(f"Development contiene FOLD_SENTINEL en {fold_col}.")
 
@@ -91,7 +89,7 @@ def run_cv(
     direct_labels = emotion_labels if train_target == TARGET_EMOTION_ORIGINAL else quadrant_labels
 
     label = experiment_name or (
-        f"{representation_name}_{model_name}_{target_col}_{protocol}_{refinement}"
+        f"{representation_name}_{model_name}_{target_col}_{PROTOCOL_INDEPENDENT}_{refinement}"
     )
     logger.info("=== CV: %s ===", label)
 
@@ -109,7 +107,7 @@ def run_cv(
         y_val_train_space = table.loc[val_mask, train_target].to_numpy()
 
         if len(X_train) == 0 or len(X_val) == 0:
-            raise ValueError(f"Fold {fold_idx} vacío para {protocol}.")
+            raise ValueError(f"Fold {fold_idx} vacío.")
 
         pipeline = pipeline_factory()
         started = perf_counter()
@@ -160,7 +158,7 @@ def run_cv(
 
         row: dict[str, Any] = {
             "representation": representation_name,
-            "protocol": protocol,
+            "protocol": PROTOCOL_INDEPENDENT,
             "target": target_col,
             "model": model_name,
             "refinement": refinement,
@@ -187,10 +185,10 @@ def run_cv(
     predictions = pd.concat(prediction_frames, ignore_index=True)
 
     logger.info(
-        "=== %s — macro_F1 %.4f ± %.4f ===",
+        "=== %s — balanced_accuracy %.4f ± %.4f ===",
         label,
-        summary["macro_f1_mean"],
-        summary["macro_f1_std"],
+        summary["balanced_accuracy_mean"],
+        summary["balanced_accuracy_std"],
     )
 
     return {

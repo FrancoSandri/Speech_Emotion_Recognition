@@ -70,7 +70,6 @@ def run_family_ablations(
                 metadata=metadata,
                 splits=splits,
                 target_col=target,
-                protocol=protocol,
                 representation_name="egemaps",
                 model_name="logistic_regression",
                 refinement="all_features",
@@ -98,7 +97,6 @@ def run_family_ablations(
                         metadata=metadata,
                         splits=splits,
                         target_col=target,
-                        protocol=protocol,
                         representation_name="egemaps",
                         model_name="logistic_regression",
                         refinement=f"{experiment}:{family}",
@@ -113,16 +111,16 @@ def run_family_ablations(
 
     baseline = fold_results.loc[
         fold_results["experiment"].eq("all_features"),
-        ["protocol", "target", "fold", "macro_f1"],
-    ].rename(columns={"macro_f1": "baseline_macro_f1"})
+        ["protocol", "target", "fold", "balanced_accuracy"],
+    ].rename(columns={"balanced_accuracy": "baseline_balanced_accuracy"})
     fold_results = fold_results.merge(
         baseline,
         on=["protocol", "target", "fold"],
         how="left",
         validate="many_to_one",
     )
-    fold_results["delta_macro_f1"] = (
-        fold_results["macro_f1"] - fold_results["baseline_macro_f1"]
+    fold_results["delta_balanced_accuracy"] = (
+        fold_results["balanced_accuracy"] - fold_results["baseline_balanced_accuracy"]
     )
 
     return {
@@ -145,11 +143,11 @@ def summarize_family_ablations(results: pd.DataFrame) -> pd.DataFrame:
     return (
         results.groupby(grouping, observed=True, sort=False)
         .agg(
-            macro_f1_mean=("macro_f1", "mean"),
-            macro_f1_std=("macro_f1", "std"),
             balanced_accuracy_mean=("balanced_accuracy", "mean"),
-            delta_macro_f1_mean=("delta_macro_f1", "mean"),
-            delta_macro_f1_std=("delta_macro_f1", "std"),
+            balanced_accuracy_std=("balanced_accuracy", "std"),
+            macro_f1_mean=("macro_f1", "mean"),
+            delta_balanced_accuracy_mean=("delta_balanced_accuracy", "mean"),
+            delta_balanced_accuracy_std=("delta_balanced_accuracy", "std"),
             n_features_mean=("n_features", "mean"),
         )
         .reset_index()
@@ -194,7 +192,6 @@ def run_lda_grid(
                     metadata=metadata,
                     splits=splits,
                     target_col=target,
-                    protocol=protocol,
                     representation_name=representation_name,
                     model_name="logistic_regression",
                     refinement="lda_shrinkage",
