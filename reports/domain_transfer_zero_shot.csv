@@ -1,0 +1,5 @@
+domain,representation,stage,n_adaptation_speakers,n_adaptation_samples,repeat,seed,run_id,balanced_accuracy,macro_f1_observed,macro_f1_source_space,accuracy,unsupported_prediction_rate,n_unsupported_prediction_classes,n_samples,n_observed_classes
+ravdess_song,egemaps,zero_shot,0,0,-1,-1,zero_shot::ravdess_song::egemaps,0.3489583333333333,0.3198714211490427,0.23990356586178202,0.3806818181818182,0.07386363636363637,1,176,6
+ravdess_song,wav2vec_temporal,zero_shot,0,0,-1,-1,zero_shot::ravdess_song::wav2vec_temporal,0.4583333333333333,0.39660859085824024,0.29745644314368014,0.4602272727272727,0.005681818181818182,1,176,6
+emodb,egemaps,zero_shot,0,0,-1,-1,zero_shot::emodb::egemaps,0.21744838286191667,0.1629540705170957,0.14258481170245874,0.2846153846153846,0.1,1,130,7
+emodb,wav2vec_temporal,zero_shot,0,0,-1,-1,zero_shot::emodb::wav2vec_temporal,0.4831274615109202,0.415367464662928,0.363446531580062,0.46923076923076923,0.007692307692307693,1,130,7

@@ -1,0 +1,65 @@
+{
+  "model_name": "final_lr_wav2vec_temporal",
+  "model_label": "Logistic Regression · wav2vec2 average_mean_std — modelo final",
+  "primary_metric": "balanced_accuracy",
+  "selection_protocol": "outer speaker-independent cross-validation",
+  "test_protocol": "test_speaker_independent",
+  "target": "emotion_original",
+  "representation": "wav2vec_temporal",
+  "representation_config": {
+    "layer_strategy": "average",
+    "pooling": "mean_std"
+  },
+  "wav2vec_model_name": "facebook/wav2vec2-base",
+  "wav2vec_revision": "966365c3dccea13c4bda090c093d08527a2200c4",
+  "include_feature_projection": true,
+  "n_levels": 13,
+  "hidden_size": 768,
+  "n_features": 1536,
+  "n_development": 1200,
+  "n_test": 240,
+  "development_actors": [
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    24
+  ],
+  "test_actors": [
+    2,
+    6,
+    21,
+    23
+  ],
+  "seed": 42,
+  "test_metrics": {
+    "macro_f1": 0.8087401889808761,
+    "balanced_accuracy": 0.828125,
+    "uar": 0.828125,
+    "weighted_f1": 0.8118625507859503,
+    "accuracy": 0.8166666666666667
+  },
+  "artifact_paths": {
+    "summary": "C:/Users/alega/OneDrive/Documentos/std/Speech_Emotion_Recognition/reports/test_results_summary.csv",
+    "predictions": "C:/Users/alega/OneDrive/Documentos/std/Speech_Emotion_Recognition/reports/test_predictions.csv",
+    "classification_report": "C:/Users/alega/OneDrive/Documentos/std/Speech_Emotion_Recognition/reports/test_classification_report_final_model.csv",
+    "pipeline": "C:/Users/alega/OneDrive/Documentos/std/Speech_Emotion_Recognition/models/final_lr_wav2vec_temporal.joblib",
+    "feature_names": "C:/Users/alega/OneDrive/Documentos/std/Speech_Emotion_Recognition/models/final_lr_wav2vec_temporal_features.json",
+    "manifest": "C:/Users/alega/OneDrive/Documentos/std/Speech_Emotion_Recognition/reports/final_model_manifest.json"
+  }
+}

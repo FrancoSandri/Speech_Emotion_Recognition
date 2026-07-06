@@ -198,3 +198,40 @@ temporal_representation:
     batch_size: 16
     gradient_clip_norm: 1.0
     inner_folds: 3
+
+# ---------------------------------------------------------------------------
+# Domain shift para RAVDESS song y EMODB
+# ---------------------------------------------------------------------------
+domain_transfer:
+  raw:
+    ravdess_song: "data/raw/Audio_Song"
+    emodb: "data/raw/EMODB"
+
+  processed_root: "data/processed/domains"
+
+  # Se reutilizan los actores del test speaker-independent de RAVDESS Speech.
+  ravdess_song:
+    test_actors_from_source: true
+
+  emodb:
+    n_test_speakers: 2
+    test_speakers: null  # Se eligen una vez por cobertura y se persisten.
+
+  # Todos los audios procesados se guardan a la frecuencia de trabajo fuente.
+  audio:
+    output_sample_rate: 48000
+
+  adaptation:
+    speaker_sizes: [0, 1, 2, 4, 8, "all"]
+    subset_repeats: 5
+    optimization_seeds: [13, 42, 73]
+    learning_rate: 0.001
+    epochs: 100
+    batch_size: 64
+    weight_decay: 0.0001
+    source_anchor: 0.0
+
+  artifacts:
+    zero_shot_results: "reports/domain_transfer_zero_shot.csv"
+    adaptation_results: "reports/domain_transfer_adaptation.csv"
+    predictions: "reports/domain_transfer_predictions.csv"

@@ -1,0 +1,4 @@
+model,label,representation,n_test,n_features,macro_f1,balanced_accuracy,uar,weighted_f1,accuracy
+final_lr_wav2vec_temporal,Logistic Regression · wav2vec2 average_mean_std — modelo final,wav2vec_temporal,240,1536,0.8087401889808761,0.828125,0.828125,0.8118625507859503,0.8166666666666667
+reference_lr_egemaps,Logistic Regression · eGeMAPSv02,egemaps,240,88,0.5400887761032018,0.5546875,0.5546875,0.539057657473045,0.55
+baseline_rf_egemaps,Random Forest · eGeMAPSv02,egemaps,240,88,0.5004381065191712,0.5234375,0.5234375,0.5071339802871159,0.525

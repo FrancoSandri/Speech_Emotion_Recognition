@@ -140,7 +140,23 @@ def _torch_balanced_accuracy(y_true: np.ndarray, y_pred: np.ndarray, n_classes: 
 
 
 def _trainable_parameters(model) -> int:
-    return int(sum(parameter.numel() for parameter in model.parameters() if parameter.requires_grad))
+    return int(
+        sum(
+            parameter.numel()
+            for parameter in model.parameters()
+            if parameter.requires_grad
+        )
+    )
+
+
+def _fold_column(protocol: str) -> str:
+    """Resuelve el fold asociado a un protocolo realmente soportado."""
+    if protocol != PROTOCOL_INDEPENDENT:
+        raise ValueError(
+            "Los experimentos temporales solo soportan actualmente "
+            f"{PROTOCOL_INDEPENDENT!r}; se recibió {protocol!r}."
+        )
+    return "fold_speaker_independent"
 
 
 # ---------------------------------------------------------------------------
@@ -248,6 +264,7 @@ def run_static_pooling_grid(
         for pooling in poolings:
             representation = build_static_representation(stats, layer_strategy, pooling)
             for protocol in protocols:
+                _fold_column(protocol)
                 for target in targets:
                     output = run_cv(
                         pipeline_factory=lambda: build_linear_probe(
@@ -304,7 +321,7 @@ def run_layer_mixture_grid(
         representation = build_flat_layer_representation(stats, pooling)
         table, feature_cols = prepare_model_table(representation, metadata, splits)
         for protocol in protocols:
-            fold_col = "fold_speaker_independent"
+            fold_col = _fold_column(protocol)
             folds = sorted(table[fold_col].unique())
             if n_folds is not None and len(folds) != n_folds:
                 raise ValueError(f"Folds inesperados para {protocol}: {folds}")
@@ -339,7 +356,7 @@ def run_layer_mixture_grid(
                     )
 
                     seed_probabilities: list[np.ndarray] = []
-                    seed_metrics: list[float] = []
+                    seed_balanced_accuracy: list[float] = []
                     for seed in seeds:
                         inner_standardizer = fit_layer_standardizer(
                             X_outer_train[inner_train_idx]
@@ -407,7 +424,7 @@ def run_layer_mixture_grid(
                             outer_val[TARGET_EMOTION_QUADRANT].astype(str).to_numpy(),
                             spec,
                         )
-                        seed_metrics.append(metrics["macro_f1"])
+                        seed_balanced_accuracy.append(metrics["balanced_accuracy"])
                         row = {
                             "representation": "wav2vec_layer_statistics",
                             "protocol": protocol,
@@ -466,8 +483,10 @@ def run_layer_mixture_grid(
                         "result_type": "ensemble",
                         "n_input_features": int(X_outer_train.shape[1] * X_outer_train.shape[2]),
                         "n_features": int(X_outer_train.shape[2]),
-                        "trainable_params": int(stats.n_layers + X_outer_train.shape[2] * len(encoder.classes_) + len(encoder.classes_)),
-                        "seed_macro_f1_std": float(np.std(seed_metrics, ddof=0)),
+                        "trainable_params": _trainable_parameters(final_model),
+                        "seed_balanced_accuracy_std": float(
+                            np.std(seed_balanced_accuracy, ddof=0)
+                        ),
                         **metrics,
                     }
                     if original is not None:
@@ -710,7 +729,7 @@ def run_multilayer_attention_cv(
     attention_records: dict[str, np.ndarray] = {}
 
     for protocol in protocols:
-        fold_col = "fold_speaker_independent"
+        fold_col = _fold_column(protocol)
         folds = sorted(table[fold_col].unique())
         if n_folds is not None and len(folds) != n_folds:
             raise ValueError(f"Folds inesperados para {protocol}: {folds}")
@@ -732,7 +751,7 @@ def run_multilayer_attention_cv(
                 )
 
                 seed_probabilities: list[np.ndarray] = []
-                seed_macro_f1: list[float] = []
+                seed_balanced_accuracy: list[float] = []
                 seed_attention: list[dict[str, np.ndarray]] = []
 
                 for seed in seeds:
@@ -863,7 +882,7 @@ def run_multilayer_attention_cv(
                         outer_val[TARGET_EMOTION_QUADRANT].astype(str).to_numpy(),
                         spec,
                     )
-                    seed_macro_f1.append(metrics["macro_f1"])
+                    seed_balanced_accuracy.append(metrics["balanced_accuracy"])
                     row = {
                         "representation": "wav2vec_multilayer_sequence",
                         "layer_strategy": layer_strategy,
@@ -936,17 +955,10 @@ def run_multilayer_attention_cv(
                     "result_type": "ensemble",
                     "n_input_features": int(n_layers * input_dim),
                     "n_features": int(input_dim * 2),
-                    "trainable_params": int(
-                        input_dim * attention_hidden_dim
-                        + attention_hidden_dim
-                        + attention_hidden_dim
-                        + 1
-                        + 2 * input_dim * 2
-                        + input_dim * 2 * len(encoder.classes_)
-                        + len(encoder.classes_)
-                        + (n_layers if layer_strategy == "learned" else 0)
+                    "trainable_params": _trainable_parameters(final_model),
+                    "seed_balanced_accuracy_std": float(
+                        np.std(seed_balanced_accuracy, ddof=0)
                     ),
-                    "seed_macro_f1_std": float(np.std(seed_macro_f1, ddof=0)),
                     **metrics,
                 }
                 if original is not None:

@@ -174,3 +174,126 @@ def compute_fold_metrics_from_predictions(
         rows.append(row)
 
     return pd.DataFrame(rows)
+
+def summarize_actor_metrics(
+    actor_metrics: pd.DataFrame,
+    *,
+    representation_col: str = "representation",
+    metric_col: str = "balanced_accuracy",
+) -> pd.DataFrame:
+    """Resume rendimiento y dispersión entre actores por representación."""
+    if actor_metrics.empty:
+        return pd.DataFrame()
+
+    required = {representation_col, metric_col}
+    missing = required - set(actor_metrics.columns)
+    if missing:
+        raise KeyError(
+            f"Faltan columnas para resumir métricas por actor: {sorted(missing)}"
+        )
+
+    summary = (
+        actor_metrics.groupby(representation_col, observed=True)[metric_col]
+        .agg(["mean", "std", "min", "max"])
+        .rename(
+            columns={
+                "mean": f"{metric_col}_actor_mean",
+                "std": f"{metric_col}_actor_std",
+                "min": "worst_actor",
+                "max": "best_actor",
+            }
+        )
+        .reset_index()
+    )
+    summary["actor_range"] = summary["best_actor"] - summary["worst_actor"]
+    return summary
+
+
+def summarize_family_ablations(
+    fold_results: pd.DataFrame,
+) -> pd.DataFrame:
+    """Agrega resultados de ablación por target, experimento y familia."""
+    if fold_results.empty:
+        return pd.DataFrame()
+
+    required = {
+        "target",
+        "experiment",
+        "family",
+        "family_label",
+        "balanced_accuracy",
+        "delta_balanced_accuracy",
+    }
+    missing = required - set(fold_results.columns)
+    if missing:
+        raise KeyError(
+            f"Faltan columnas para resumir ablaciones: {sorted(missing)}"
+        )
+
+    return (
+        fold_results.groupby(
+            ["target", "experiment", "family", "family_label"],
+            observed=True,
+            dropna=False,
+        )
+        .agg(
+            balanced_accuracy_mean=("balanced_accuracy", "mean"),
+            balanced_accuracy_std=("balanced_accuracy", "std"),
+            delta_mean=("delta_balanced_accuracy", "mean"),
+            delta_std=("delta_balanced_accuracy", "std"),
+            n_folds=("balanced_accuracy", "size"),
+        )
+        .reset_index()
+    )
+
+
+def summarize_projection_results(
+    cv_results: pd.DataFrame,
+    *,
+    protocol: str,
+    target: str,
+    model: str = "logistic_regression",
+    refinements: Sequence[str] = ("none", "pca_95", "lda_shrinkage"),
+) -> pd.DataFrame:
+    """Resume rendimiento, estabilidad y dimensionalidad por proyección."""
+    if cv_results.empty:
+        return pd.DataFrame()
+
+    required = {
+        "representation",
+        "protocol",
+        "target",
+        "model",
+        "refinement",
+        "balanced_accuracy",
+        "n_features",
+    }
+    missing = required - set(cv_results.columns)
+    if missing:
+        raise KeyError(
+            f"Faltan columnas para comparar proyecciones: {sorted(missing)}"
+        )
+
+    selected = cv_results.loc[
+        cv_results["protocol"].eq(protocol)
+        & cv_results["target"].eq(target)
+        & cv_results["model"].eq(model)
+        & cv_results["refinement"].isin(tuple(refinements))
+    ].copy()
+
+    if selected.empty:
+        return pd.DataFrame()
+
+    return (
+        selected.groupby(
+            ["representation", "target", "refinement"],
+            observed=True,
+        )
+        .agg(
+            balanced_accuracy_mean=("balanced_accuracy", "mean"),
+            balanced_accuracy_std=("balanced_accuracy", "std"),
+            n_features_mean=("n_features", "mean"),
+            n_folds=("balanced_accuracy", "size"),
+        )
+        .reset_index()
+    )
